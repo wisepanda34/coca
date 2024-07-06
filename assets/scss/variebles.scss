@@ -1,0 +1,26 @@
+$linear-purple: linear-gradient(60deg, #FF62B7 0%, #9F53FF 100%);
+$linear-purple-hover: linear-gradient(90deg, #fc70bb 0%, #a45ef8 100%);
+$menu-open: linear-gradient(90deg, #fc70bb 0%, #a45ef8 100%);
+
+$purple-nav: #2C0958;
+$purple-nav-hover: #9307ba;
+$footer: #1B013D;
+$footer-white: #FFFFFF;
+$footer-color: #A6A6A6;
+
+$text-main: #1D1E25;
+$white: #FFFEFE;
+$grey-light: #F5F5F5;
+$grey: #7E8492;
+$blue-primary: #1463FF;
+$blue-dark: #161A34;
+$green-medium: #46B277;
+
+$line-grey: #A59C9C;
+
+.text-linear-purple {       
+  background-image: $linear-purple;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-box-decoration-break: clone;
+}

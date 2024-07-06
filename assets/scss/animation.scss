@@ -1,0 +1,180 @@
+//Transition name="slide-fade"
+.slide-fade-enter-active {
+  transition: all 0.2s ease;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateX(20px);
+  opacity: 0;
+}
+
+//Transition name="bounce"
+.bounce-enter-active {
+  animation: bounce-in 0.5s;
+}
+.bounce-leave-active {
+  animation: bounce-in 0.5s reverse;
+}
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+//<Transition name="nested">
+//<div v-if="show" class="outer">
+//<div class="inner">
+//                  Hello
+//</div>
+//</div>
+//</Transition>
+/* rules that target nested elements */
+.nested-enter-active .inner,
+.nested-leave-active .inner {
+  transition: all 0.3s ease-in-out;
+}
+
+.nested-enter-from .inner,
+.nested-leave-to .inner {
+  transform: translateX(30px);
+  opacity: 0;
+}
+
+/* ... other necessary CSS omitted */
+
+/* delay enter of nested element for staggered effect */
+.nested-enter-active .inner {
+  transition-delay: 0.25s;
+}
+//<TransitionGroup name="list" tag="ul">
+.list-enter-active,
+.list-leave-active {
+  transition: all 0.5s ease;
+}
+.list-enter-from,
+.list-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+@keyframes flashButton {
+  0% {
+    background: $linear-purple;
+  }
+  20% {
+    background: lighten(#FF62B7, 5%);
+  }
+  80% {
+    background: lighten(#FF62B7, 5%);
+  }
+  100% {
+    background: $linear-purple;
+  }
+}
+@keyframes small-rotate {
+  
+  0% {
+    transform: rotate(10deg);
+  }
+  1% {
+    transform: rotate(12deg);
+  }
+  3% {
+    transform: rotate(8deg);
+  }
+  5% {
+    transform: rotate(12deg);
+  }
+  7% {
+    transform: rotate(8deg);
+  }
+  9% {
+    transform: rotate(12deg);
+  }
+  11% {
+    transform: rotate(8deg);
+  }
+  13% {
+    transform: rotate(12deg);
+  }
+  15% {
+    transform: rotate(8deg);
+  }
+  16% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(10deg);
+  }
+ }
+ @keyframes spinner-rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+ }
+ @keyframes slideInFromLeft{
+  0% {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+ }
+ @keyframes slideInFromRight{
+  0% {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+ }
+ @keyframes slideInFromUp{
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(50px);
+    opacity: 1;
+  }
+ }
+ @keyframes float-x {
+  0%, 100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  50% {
+      -webkit-transform: translateX(-7px);
+      transform: translateX(-7px);
+  }
+}
+@keyframes float-y {
+  0%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-7px);
+    transform: translateY(-7px);
+  }
+
+}
+ 
