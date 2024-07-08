@@ -22,28 +22,6 @@ const closeMenu = () => {
   }
 }
 
-import { useRoute } from 'vue-router';
-
-const route = useRoute();
-const isMenuOpen = ref(false)
-const isContactRoute = computed(() => route.path === '/contact');
-
-const toggleMenu = () => {
-  if (window.innerWidth <= 900) {
-    isMenuOpen.value = !isMenuOpen.value
-    if (isMenuOpen.value) {
-        document.body.classList.add('no-scroll')
-    } else {
-      document.body.classList.remove('no-scroll')
-    }
-  }
-}
-const closeMenu = () => {
-  if(window.innerWidth <= 900){
-    toggleMenu()
-  }
-}
-
 </script>
  
 <template>
