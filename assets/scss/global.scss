@@ -3,6 +3,7 @@ html {
   font-size: 18px;
   line-height: 32px;
   user-select: none;
+  user-select: none;
 }
 
 body {
@@ -106,6 +107,23 @@ svg {
   font-size: 32px;
   line-height: 42px;
   letter-spacing: -1px;
+}
+.rotate-180 {
+  transform: rotate(180deg);
+}
+.flex {
+  display: flex;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gap-5 {
+  gap: 5px;
+}
+.pointer {
+  cursor: pointer;
 }
 .rotate-180 {
   transform: rotate(180deg);
