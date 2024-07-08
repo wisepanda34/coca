@@ -2,6 +2,7 @@ html {
   scroll-behavior: smooth;
   font-size: 18px;
   line-height: 32px;
+  user-select: none;
 }
 
 body {
@@ -36,26 +37,31 @@ svg {
   overflow: hidden;
 }
 
-.page {
+.site {
   position: relative;
+  max-width: 1440px;
   min-height: 100vh;
-  user-select: none;
+  margin: 0 auto;
+  overflow: hidden;
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 0 auto;
-  overflow: hidden;
+  
+}
+
+.page {
+  background: yellow;
+  height: 80vh;
 }
 
 .container {
-  max-width: 1240px;
-  padding: 0 20px;
+  max-width: 1200px;
   margin: 0 auto;
 }
-@media (max-width: 900px) {
+@media (max-width: 1240px) {
   .container {
-    padding: 0 10px ;
+    padding: 0 20px ;
   }
   .btn--mobile-menu {
     font-size: 24px!important;
@@ -101,5 +107,21 @@ svg {
   line-height: 42px;
   letter-spacing: -1px;
 }
-
+.rotate-180 {
+  transform: rotate(180deg);
+}
+.flex {
+  display: flex;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gap-5 {
+  gap: 5px;
+}
+.pointer {
+  cursor: pointer;
+}
 

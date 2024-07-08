@@ -4,11 +4,13 @@
 </script>
  
 <template>
-  <TheHeader/>
-  <slot/>
-  <TheFooter/>
+  <div class="site">
+    <TheHeader/>
+    <slot />
+    <TheFooter/>
+  </div>
 </template>
  
 <style scoped lang='scss'>
- 
+
 </style>
