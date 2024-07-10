@@ -1,34 +1,60 @@
 <!-- components/Footer.vue -->
 <script setup>
 import {footerLinks, sociaties, info} from '~/constants/index.js'
-  
+import { useRoute } from 'vue-router'
+import { computed } from 'vue'
+
+const route = useRoute()
+const isWhiteRoute = computed(() => {
+  return route.path === '/' || route.path === '/blog'
+})  
  
+const windowWidth = ref(null)
+
+const handleResize = () => {
+  windowWidth.value = window.innerWidth
+}
+
+onMounted(() => {
+  windowWidth.value = window.innerWidth
+  window.addEventListener('resize', handleResize)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('resize', handleResize)
+})
+
+const isMobile = computed(() => windowWidth.value !== null ? windowWidth.value < 992 : false)
 </script>
  
 <template>
-  <footer class="footer">
+  <footer :class="['footer', { 'footer--white': isWhiteRoute }]">
     <div class="container">
       <div class="footer__wrapper">
 
         <div class="footer__top">
           <div>
             <h2 class="footer__top-title">Think beyond the wave</h2>
-            <p class="footer__top-descr">Ask about Sans products, pricing, implementation, or anything else. Our highly trained reps are standing by, ready to help</p>
+            <p :class="['footer__top-descr', { 'black before-black': isWhiteRoute, 'grey': !isMobile && !isWhiteRoute, 'white': isMobile && !isWhiteRoute }]">Ask about Sans products, pricing, implementation, or anything else. Our highly trained reps are standing by, ready to help</p>
           </div>
           <div class="footer__top-btn">
-            <UIButton text="Try for free"/>
+            <UIButton text="Try for free" :isWhite="isWhiteRoute"/>
           </div>
         </div>
 
         <div class="footer__middle">
           <div class="footer__middle-content">
-            <TheLogo :isWhite="true"/>
-            <p>We built an elegant solution. Our team created a fully integrated sales and marketing solution for SMBs</p>
+            <TheLogo :isWhite="!isWhiteRoute"/>
+            <p :class="[{ 'black': !isMobile && isWhiteRoute, 'grey': !isWhiteRoute || isMobile }]">We built an elegant solution. Our team created a fully integrated sales and marketing solution for SMBs</p>
           </div>
           <div class="links">
             <div class="links__category" v-for="(category, index) in footerLinks" :key="index" >
               <h3 class="links__title">{{ category.subtitle }}</h3>
-              <div class="links__item" v-for="(path, name) in category.point" :key="name">
+              <div class="links__item" 
+                :class="[{ 'black': isWhiteRoute, 'grey': !isWhiteRoute }]"
+                v-for="(path, name) in category.point" 
+                :key="name"
+              >
                 <NuxtLink :to="path">{{ name }}</NuxtLink>
               </div>
             </div>
@@ -37,22 +63,27 @@ import {footerLinks, sociaties, info} from '~/constants/index.js'
 
         <div class="footer__line"></div>
 
-        <div class="footer__bottom">
-          <div class="sociaty">
+        <div class="footer__bottom" :class="[{ 'center': !isMobile && isWhiteRoute }]">
+          <div class="sociaty" :class="[{ 'none': !isMobile && isWhiteRoute}]">
             <div class="sociaty__item" v-for="(item, index) in sociaties" :key="index">
               <NuxtLink :to="item.link">
-                <NuxtImg class="sociaty__img" :src="item.src"></NuxtImg>
+                <NuxtImg v-if="!isWhiteRoute" class="sociaty__img" :src="item.srcWhite"/>
+                <NuxtImg v-else class="sociaty__img" :src="item.src"/>
               </NuxtLink>
             </div>
           </div>
-          <div class="info">
-            <div class="info__item" v-for="(item, index) in info" :key="index">
+          <div class="info" :class="[{ 'none': !isMobile && isWhiteRoute}]">
+            <div 
+              class="info__item" 
+              v-for="(item, index) in info" 
+              :key="index"
+            >
               <NuxtLink :to="item.link">{{ item.title }}</NuxtLink>
             </div>
           </div>
           <div class="copyright">
-            <IconCopyright/> 
-            <div>Copyright 2023, All Rights Reserved</div>
+            <IconCopyright class="copyright__icon" :isWhite="!isMobile"/> 
+            <div :class="[{'grey' : !isMobile && isWhiteRoute}]">Copyright 2023, All Rights Reserved</div>
           </div>
         </div>
 
@@ -62,13 +93,32 @@ import {footerLinks, sociaties, info} from '~/constants/index.js'
 </template>
  
 <style scoped lang='scss'>
+
  .footer {
-  min-height: 700px;
   background: $black;
   color: $white;
+  &--white{
+    position: relative;
+    background: $white;
+    color: $black;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('/public/images/footer-bg.png');
+      background-size: contain; 
+      background-repeat: no-repeat; 
+      z-index: 1;
+    }
+  }
 
   &__wrapper {
+    position: relative; 
     padding: 70px 0 20px;
+    z-index: 2;
   }
 
   &__top {
@@ -87,7 +137,6 @@ import {footerLinks, sociaties, info} from '~/constants/index.js'
       margin: 24px 0;
       line-height: 32px;
       font-weight: 500;
-      color: $grey-text;
     }
   }
 
@@ -100,11 +149,10 @@ import {footerLinks, sociaties, info} from '~/constants/index.js'
 
     font-size: 16px;
     line-height: 26px;
-    color: $grey-text-2;
     
     &-content {
       width: 292px;
-      padding-top: 10px;      
+      padding-top: 10px; 
     }
     .links {
       width: 100%;
@@ -114,7 +162,6 @@ import {footerLinks, sociaties, info} from '~/constants/index.js'
 
       &__title {
         font-weight: 700;
-        color: $white;
         margin-bottom: 24px;
       }
       &__item {
@@ -122,8 +169,11 @@ import {footerLinks, sociaties, info} from '~/constants/index.js'
         transition: all 0.2s ease;
 
         &:hover {
-         color: $white; 
+         color: $grey-text-2; 
         }
+      }
+      &__item.grey:hover {
+        color: $white;
       }
     }
   }
@@ -142,7 +192,6 @@ import {footerLinks, sociaties, info} from '~/constants/index.js'
 
     font-size: 14px;
     font-weight: 500;
-    color: $white;
     letter-spacing: 1px;
     .sociaty {
 
@@ -165,7 +214,7 @@ import {footerLinks, sociaties, info} from '~/constants/index.js'
         transition: all 0.2s ease;
 
         &:hover {
-          color: $grey-text;
+          color: $grey-text-2;
         }
       }
     }
@@ -173,12 +222,23 @@ import {footerLinks, sociaties, info} from '~/constants/index.js'
       display: flex;
       align-items: center;
       gap: 5px;
+
+      &__icon {
+        padding-bottom: 3px;
+      }
     }
   }
-
  }
+ 
+
  @media (max-width: 991px) {
   .footer {
+    
+    &--white::before {
+      top: 0;
+      left: -15vw;
+    }
+  
     &__wrapper {
       padding: 20px 17px;
     }
@@ -187,7 +247,7 @@ import {footerLinks, sociaties, info} from '~/constants/index.js'
       flex-direction: column;
       padding: 20px 0;
       &-title {
-        font-size: 8.5vw;
+        font-size: 8vw;
         text-align: center;
       }
       &-descr {
@@ -204,6 +264,9 @@ import {footerLinks, sociaties, info} from '~/constants/index.js'
           height: 1px;
           background: $white;
         }
+      }
+      &-descr.before-black::before {
+        background: $black;
       }
     }
     &__middle {
@@ -242,13 +305,18 @@ import {footerLinks, sociaties, info} from '~/constants/index.js'
     }
     &__bottom {
       .info {
-        gap: 30px;
+        gap: 24px;
       }
     }
   }
  }
- @media (max-width: 450px) {
+ @media (max-width: 420px) {
   .footer {
+    &__top {
+      &-title {
+        font-size: 24px;
+      }
+    }
     &__bottom {
       .info {
         flex-direction: column;

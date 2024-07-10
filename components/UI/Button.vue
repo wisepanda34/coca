@@ -1,11 +1,20 @@
 <!-- components/UI/Button.vue -->
 <script setup lang='ts'>
  
- const props = defineProps(['text'])
+ const props = defineProps({
+    text:{
+      type: String,
+      default: 'Ok'
+    },
+    isWhite: {
+      type: Boolean,
+      default: true
+    }
+  })
 </script>
  
 <template>
-  <button class="button flex-center">
+  <button :class="['button flex-center', { 'button--white': isWhite }]">
     {{ props.text }}
   </button>
 </template>
@@ -26,6 +35,17 @@
   }
   &:active {
     background: $black;
+  }
+  &--white {
+    background: $black;
+    color: $white;
+
+    &:hover {
+      background: $grey-dark;
+    }
+    &:active {
+      background: $white;
+    }
   }
  }
 </style>

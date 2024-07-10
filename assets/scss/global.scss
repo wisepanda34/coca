@@ -28,8 +28,8 @@ body {
 }
 
 .page {
-  background: yellow;
-  height: 80vh;
+  // background: yellow;
+  height: 50vh;
 }
 
 .container {
@@ -124,6 +124,9 @@ svg {
   justify-content: center;
   align-items: center;
 }
+.center {
+  justify-content: center!important;
+}
 .gap-5 {
   gap: 5px;
 }
@@ -144,4 +147,15 @@ svg {
 .gap-5 {
   gap: 5px;
 }
-
+.black {
+  color: $black;
+ }
+ .white {
+  color: $white;
+ }
+ .grey {
+  color: $grey-text-2;
+ }
+ .none {
+  display: none!important;
+ }
