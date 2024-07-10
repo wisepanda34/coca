@@ -17,7 +17,7 @@ export default defineNuxtConfig({
     },
   },
   devtools: { enabled: true },
-  modules: [],
+  modules: ['@nuxt/image'],
   css: [
     '~/assets/scss/main.scss',
   ],

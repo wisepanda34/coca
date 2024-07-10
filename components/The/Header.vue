@@ -54,35 +54,6 @@ const closeMenu = () => {
       </div>
     </div>
   </header>
-  <header class="header">
-    <div class="container">
-      <div class="header__wrapper">
-        <TheLogo/>
-        <div class="header__menu" :class="{open: isMenuOpen}">
-          <nav class="header__nav">
-            <NuxtLink class="header__nav-item" to="/" exact-active-class="active" @click="closeMenu">Home</NuxtLink>
-            <NuxtLink class="header__nav-item" to="/about" exact-active-class="active" @click="closeMenu">About</NuxtLink>
-            <NuxtLink class="header__nav-item" to="/blog" exact-active-class="active" @click="closeMenu">Blog</NuxtLink>
-            <NuxtLink class="header__nav-item" to="/pricing" exact-active-class="active" @click="closeMenu">Pricing</NuxtLink>
-            <NuxtLink class="header__nav-item contact " to="/contact" exact-active-class="active" @click="closeMenu">
-              <div class="flex-center gap-5">
-                <div>Contact Us </div>
-                <IconArrowBlack :is-blue="isContactRoute"/>
-              </div>
-              <div class="contact__line-black" v-if="!isContactRoute"></div>
-              <div class="contact__line-blue" v-else></div>
-            </NuxtLink>
-          </nav>
-          <div class="header__menu-close" @click="toggleMenu">
-            <IconClose/>
-          </div>
-        </div>
-        <div class="header__burger" @click="toggleMenu">
-          <IconBurger/>
-        </div>
-      </div>
-    </div>
-  </header>
 </template>
  
 <style scoped lang='scss'>
