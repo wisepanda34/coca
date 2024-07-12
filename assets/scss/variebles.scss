@@ -12,6 +12,7 @@ $text-main: #1D1E25;
 $black: #1D1E25;
 $white: #FFFEFE;
 $grey-light: #F5F5F5;
+$grey-border: #CED1D8;
 $grey-text: #AFB3BB;
 $grey-text-2: #7E8492;
 $grey: #7E8492;
@@ -22,9 +23,23 @@ $green-medium: #46B277;
 
 $line-grey: #A59C9C;
 
+
+$shadow-1: 0px 5px 40px 0px rgba(0, 0, 0, 0.2);
+$shadow-2: 0px 15px 25px 0px rgba(0, 0, 0, 0.05);
+$shadow-3: 0.5px 0.5px 0px rgba(51, 51, 51, 0.35);
+$shadow-4: 0px 4px 15px 0px rgba(0, 0, 0, 0.05);
+$shadow-5: -7px 7px 10px 2px rgba(2, 41, 55, 0.2);
+
+$radius-3: 3px;
+$radius-4: 4px;
+$radius-5: 5px;
+$radius-8: 8px;
+$radius-12: 12px;
+
 .text-linear-purple {       
   background-image: $linear-purple;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   -webkit-box-decoration-break: clone;
 }
+

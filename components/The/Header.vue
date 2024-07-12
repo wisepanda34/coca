@@ -7,7 +7,7 @@ const isMenuOpen = ref(false)
 const isContactRoute = computed(() => route.path === '/contact');
 
 const toggleMenu = () => {
-  if (window.innerWidth <= 900) {
+  if (window.innerWidth <= 991) {
     isMenuOpen.value = !isMenuOpen.value
     if (isMenuOpen.value) {
         document.body.classList.add('no-scroll')
@@ -17,7 +17,7 @@ const toggleMenu = () => {
   }
 }
 const closeMenu = () => {
-  if(window.innerWidth <= 900){
+  if(window.innerWidth <= 991){
     toggleMenu()
   }
 }
@@ -96,11 +96,11 @@ const closeMenu = () => {
     }
   }
   &__burger {
-  display: none;
- }
+    display: none;
+  }
  }
 
- @media (max-width: 900px) {
+ @media (max-width: 991px) {
   .header {
     &__wrapper {
       height: 100px;
@@ -111,6 +111,7 @@ const closeMenu = () => {
       bottom: 0;
       left: 0;
       right: 0;
+      z-index: 1000;
 
       background: $blue-dark;
       padding-top: 20vh;
@@ -135,7 +136,6 @@ const closeMenu = () => {
       gap: 5vh;
       font-size: 24px;
       letter-spacing: 2px;
-
       color: $white;
     }
     &__burger {

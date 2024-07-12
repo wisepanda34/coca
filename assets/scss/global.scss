@@ -29,7 +29,7 @@ body {
 
 .page {
   // background: yellow;
-  height: 50vh;
+  min-height: 50vh;
 }
 
 .container {
@@ -159,3 +159,74 @@ svg {
  .none {
   display: none!important;
  }
+ .title-h1 {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 120%;
+  margin-bottom: 50px;
+ }
+ .title-h2 {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 120%;
+ }
+ .slogan {
+   position: relative;
+   padding-left: 100px;
+   font-size: 32px;
+   font-weight: 700;
+   line-height: 130%;
+   letter-spacing: -1px;
+   margin-bottom: 70px;
+   &::before {
+     position: absolute;
+     top: 17px;
+     left: 0;
+     content: '';
+     width: 75px;
+     height: 1px;
+     background: $black;
+    }
+  }
+  @media (max-width: 1439px) {
+   .title-h1 {
+     font-size: 64px;
+   }
+   .title-h2 {
+     font-size: 50px;
+   }
+   .slogan  {
+    font-size: 26px;
+   }
+  }
+  @media (max-width: 1179px) {
+   .title-h1 {
+     font-size: 50px;
+     text-align: center;
+   }
+   .title-h2 {
+     font-size: 40px;
+   }
+   .slogan  {
+    font-size: 24px;
+   }
+  }
+  @media (max-width: 600px) {
+   .title-h1 {
+     font-size: 40px;
+     text-align: center;
+   }
+   .title-h2 {
+     font-size: 26px;
+   }
+   .slogan  {
+    font-size: 18px;
+    margin-bottom: 40px;
+    padding-left: 50px;
+    &::before {
+      width: 35px;
+      top: 10px;
+    }
+   }
+  }
+  

@@ -1,12 +1,10 @@
 <!-- pages/index.vue -->
-<script setup lang='ts'>
- 
+<script setup>
+ import Digital from '~/components/home/Digital.vue';
 </script>
  
 <template>
-  <div>
-    Our digital agency helps clients develop, <br> implement and maintain successful digital marketing strategies across all channels. <br> Also work with you to build your website and create online businesses that grow.
-  </div>
+  <Digital/>
 </template>
  
 <style scoped lang='scss'>

@@ -108,7 +108,7 @@ const isMobile = computed(() => windowWidth.value !== null ? windowWidth.value <
       left: 0;
       width: 100%;
       height: 100%;
-      background-image: url('/public/images/footer-bg.png');
+      background-image: url('/public/images/bg-orange.png');
       background-size: contain; 
       background-repeat: no-repeat; 
       z-index: 1;
