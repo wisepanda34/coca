@@ -1,0 +1,80 @@
+<!-- Partners.vue -->
+<script setup>
+ import { partners } from '~/constants'
+</script>
+ 
+<template>
+  <section class="partners">
+    <div class="container">
+      <div class="partners__wrapper">
+        <div class="partners__left">
+          <h2 class="title-h2">890+</h2>
+          <p class="motto">some big companies that we work with, and trust us very much</p>
+        </div>
+        <div class="partners__right">
+          <div class="partners__brand"
+            v-for="(brand, index) in partners" 
+            :key="index"
+          >
+            <NuxtImg :src="brand.src" :alt="brand.name"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
+ 
+<style scoped lang='scss'>
+ .partners {
+    &__wrapper {
+      padding: 24px 0;
+
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+    }
+    &__left {
+      width: 300px;
+    }
+    &__right {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      column-gap: 24px;
+      grid-row: auto;
+    }
+    &__brand {
+     width: 160px;
+     height: 90px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+    }
+ }
+ @media (max-width: 991px) {
+  .partners {
+    &__wrapper {
+      flex-direction: column;
+    }
+    &__left {
+      margin: 0 auto;
+    }
+  }
+ }
+ @media (max-width: 750px) {
+  .partners {
+    &__wrapper {
+      gap: 24px;
+    }
+    &__right {
+      grid-template-columns: 1fr 1fr;
+    }
+    &__brand {
+      width: 100%;
+      margin: 0 auto;
+      img {
+        max-width: 160px;
+      }
+    }
+  }
+ }
+</style>

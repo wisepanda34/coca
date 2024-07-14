@@ -8,7 +8,7 @@
     <div class="container">
       <div class="sans__wrapper">
         <h2 class="title-h2">Sans help our client solve complex customer problems with date that does more.</h2>
-        <p class="sans__motto">Our platform offers the modern enterprise full control of how date can be access and used with industry leading software solutions for identity, activation, and date collaboration</p>
+        <p class="sans__motto motto">Our platform offers the modern enterprise full control of how date can be access and used with industry leading software solutions for identity, activation, and date collaboration</p>
         <div class="sans__content">
           <div class="sans__block">
             <div class="sans__block-img">
@@ -56,10 +56,6 @@
 
    &__motto {
     width: 50%;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 150%;
-    color: $grey-text-2;
    }
 
    &__content {
@@ -104,7 +100,6 @@
     }
      &__content {
       grid-template-columns: 1fr;
-      grid-row: 2;
       gap: 5vw;
       margin-top: 8vw;
      }
