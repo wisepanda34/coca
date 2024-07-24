@@ -1,6 +1,10 @@
 <!-- Advertize.vue -->
 <script setup>
- import { advertizes } from '~/constants';
+import { advertizes } from '~/constants';
+import { useAnimationObserver } from '~/composables/useAnimate';
+import {addAnimation} from '~/utils/animate.js'
+ 
+const advertizeRef = useAnimationObserver(addAnimation, 0.5);  
 </script>
  
 <template>
@@ -9,7 +13,7 @@
       <div class="advertize__wrapper">
         <h3 class="advertize__title title-h3">Advertise, analyze, and optimize! We do it all for you</h3>
         <p class="advertize__motto motto">Build more meaningful and lasting relationships - better understand their needs, identify new opportunities to help address any problems faster</p>
-        <div class="advertize__advantages">
+        <div class="advertize__advantages animate-up" ref="advertizeRef">
           <div class="advertize__block" v-for="(item, index) in advertizes" :key="index">
             <div class="advertize__block-image">
               <NuxtImg :src="item.imageLink" :alt="item.imageLink"/>

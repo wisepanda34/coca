@@ -1,13 +1,16 @@
 <!-- Passion.vue -->
 <script setup>
+import { useAnimationObserver } from '~/composables/useAnimate';
+import {addAnimation} from '~/utils/animate.js'
  
+const passionRef = useAnimationObserver(addAnimation);   
 </script>
  
 <template>
   <section class="passion">
     <div class="container">
       <div class="passion__wrapper">
-        <div class="passion__left">
+        <div class="passion__left animate-from-left" ref="passionRef">
           <NuxtImg src="/images/passion.png"/>
         </div>
 

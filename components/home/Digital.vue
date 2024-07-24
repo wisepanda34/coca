@@ -1,6 +1,10 @@
 <!-- components/home/Digital.vue -->
 <script setup>
+import { useAnimationObserver } from '~/composables/useAnimate';
+import {addAnimation} from '~/utils/animate.js'
  
+const digitalRef = useAnimationObserver(addAnimation); 
+
 </script>
  
 <template>
@@ -8,7 +12,7 @@
     <div class="container">
       <div class="digital__wrapper">
 
-        <div class="digital__left">
+        <div class="digital__left animate-up" ref="digitalRef">
           <h1 class="title-h1">Digitally forward creative</h1>
           <p class="slogan">Our biggest challenge is making sure we're always designing and building products that will help you run your business better.</p>
           <div class="digital__email">

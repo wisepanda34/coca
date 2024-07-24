@@ -141,3 +141,48 @@ export const advertizes = [
     motto: 'Build more meaningful and lasting relationships - better understand their needs, identify new opportunities to help address any problems faster'
   }
  ]
+
+ export const trendigSlides = [
+  {
+    imageLink: '/images/whats_makes.png',
+    title: 'What makes an authentic employee profile, and why does it matter?',
+    published: 'Jan 30, 2021',
+    author: 'Albert Sans'
+  },
+  {
+    imageLink: '/images/how_build.png',
+    title: 'How to build a Kaylen relationship with a good company',
+    published: 'Apr 12, 2023',
+    author: 'April Rose'
+  },
+  {
+    imageLink: '/images/slide-3.png',
+    title: 'What makes an authentic employee profile, and why does it matter ?',
+    published: 'Sep 17, 2024',
+    author: 'Gregory Simson'
+  }
+]
+
+export const customerSlides = [
+  {
+    name: 'Renee Wells',
+    avatar: '/images/ava-1.png',
+    position: 'Product Designer, Quotient',
+    rating: 5,
+    text: '“With Agency the results are very satisfying. wrapped with Hight quality and innovative design that makes a surge of visitors on my website”'
+  },
+  {
+    name: 'Dane Lewes',
+    avatar: '/images/ava-1.png',
+    position: 'Product Manager, BCFRoom',
+    rating: 4,
+    text: '“Working with Agency was a game-changer. Their high-quality, innovative design boosted my websites visitor engagement remarkably.”'
+  },
+  {
+    name: 'Gabbi Ronophas',
+    avatar: '/images/ava-1.png',
+    position: 'CEO, Bright Lem',
+    rating: 3,
+    text: '“ Their high-quality, innovative design boosted my websites visitor engagement remarkably.”'
+  }
+]

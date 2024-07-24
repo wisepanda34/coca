@@ -46,11 +46,11 @@ body {
   }
 }
 
-@media (max-width: 900px) {
-  .container {
-    padding: 0 7px ;
-  }
-}
+// @media (max-width: 900px) {
+//   .container {
+//     padding: 0 7px ;
+//   }
+// }
 img {
   width: 100%;
   height: 100%;
@@ -144,6 +144,9 @@ svg {
   justify-content: center;
   align-items: center;
 }
+.text-center {
+  text-align: center;
+}
 .gap-5 {
   gap: 5px;
 }
@@ -207,6 +210,11 @@ svg {
     line-height: 1.78;
     color: $grey-text-2;
   }
+  .motto-small {
+    font-size: 14px;
+    color: $grey-text-2;
+    margin: 16px 0;
+  }
   @media (max-width: 1439px) {
    .title-h1 {
      font-size: 64px;
@@ -234,12 +242,17 @@ svg {
    }
    .title-h3 {
      font-size: 32px;
+     margin-bottom: 4vw;
    }
    .title-h4 {
      font-size: 24px;
    }
    .slogan  {
     font-size: 24px;
+   }
+   .motto-small {
+    font-size: 12px;
+    margin: 8px 0;
    }
   }
   @media (max-width: 600px) {

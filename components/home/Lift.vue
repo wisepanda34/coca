@@ -1,6 +1,6 @@
 <!-- Lift.vue -->
 <script setup>
- 
+
 </script>
  
 <template>

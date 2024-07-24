@@ -1,17 +1,22 @@
 <!-- Partners.vue -->
 <script setup>
- import { partners } from '~/constants'
+import { partners } from '~/constants'
+import { useAnimationObserver } from '~/composables/useAnimate';
+import {addAnimation} from '~/utils/animate.js'
+ 
+const countRef = useAnimationObserver(addAnimation, 0.1);
+const partnersRef = useAnimationObserver(addAnimation, 0.1);
 </script>
  
 <template>
   <section class="partners">
     <div class="container">
       <div class="partners__wrapper">
-        <div class="partners__left">
+        <div class="partners__left animate-from-left" ref="countRef">
           <h2 class="title-h2">890+</h2>
           <p class="motto">some big companies that we work with, and trust us very much</p>
         </div>
-        <div class="partners__right">
+        <div class="partners__right animate-from-right" ref="partnersRef">
           <div class="partners__brand"
             v-for="(brand, index) in partners" 
             :key="index"

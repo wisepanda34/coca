@@ -1,6 +1,9 @@
 <!-- components/home/Sans.vue -->
 <script setup>
+import { useAnimationObserver } from '~/composables/useAnimate';
+import {addAnimation} from '~/utils/animate.js'
  
+const sansRef = useAnimationObserver(addAnimation, 0.5);  
 </script>
  
 <template>
@@ -9,7 +12,7 @@
       <div class="sans__wrapper">
         <h2 class="title-h2">Sans help our client solve complex customer problems with date that does more.</h2>
         <p class="sans__motto motto">Our platform offers the modern enterprise full control of how date can be access and used with industry leading software solutions for identity, activation, and date collaboration</p>
-        <div class="sans__content">
+        <div class="sans__content animate-up" ref="sansRef">
           <div class="sans__block">
             <div class="sans__block-img">
               <NuxtImg src="/svg/build.svg"/>
