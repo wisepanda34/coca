@@ -4,8 +4,8 @@ import { partners } from '~/constants'
 import { useAnimationObserver } from '~/composables/useAnimate';
 import {addAnimation} from '~/utils/animate.js'
  
-const countRef = useAnimationObserver(addAnimation, 0.1);
-const partnersRef = useAnimationObserver(addAnimation, 0.1);
+const countRef = useAnimationObserver(addAnimation, 1);
+const partnersRef = useAnimationObserver(addAnimation, 1);
 </script>
  
 <template>

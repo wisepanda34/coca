@@ -1,6 +1,50 @@
 <!-- Lift.vue -->
 <script setup>
+import { useAnimationObserver } from '~/composables/useAnimate';
+ 
+const customers = ref(0)
+const hours = ref(0)
+const members = ref(0)
+const integrations = ref(0)
 
+const animationValue = (el) => {
+  const endValue = parseInt(el.dataset.value, 10);
+  const increment = parseInt(el.dataset.increment, 10);
+  const variable = el.dataset.variable;
+  let startValue = 0;
+  let targetRef;
+
+  switch (variable) {
+    case 'customers': targetRef = customers;
+      break;
+    case 'hours': targetRef = hours;
+      break;
+    case 'members': targetRef = members;
+      break;
+    case 'integrations': targetRef = integrations;
+      break;
+    default:
+      return;
+  }
+
+  const incrementValue = () => {
+    if (startValue < endValue) {
+      startValue += increment;
+      if (startValue > endValue) startValue = endValue;
+      targetRef.value = startValue;
+      setTimeout(incrementValue, 40);
+    } else {
+      targetRef.value = endValue;
+    }
+  };
+
+  incrementValue();
+};
+
+const customersRef = useAnimationObserver(animationValue, 1); 
+const hoursRef = useAnimationObserver(animationValue, 1); 
+const membersRef = useAnimationObserver(animationValue, 1); 
+const integrationsRef = useAnimationObserver(animationValue, 1); 
 </script>
  
 <template>
@@ -9,22 +53,24 @@
       <div class="lift__wrapper">
         <div class="lift__achiviment">
           <div class="lift__achiviment-block">
-            <h2 class="title-h2 black">17k</h2>
+            <h2 class="title-h2 black" ref="customersRef" data-value="17" data-increment="1" data-variable="customers">
+              {{ customers }}<span v-show="customers === 17">k</span>
+            </h2>
             <p>happy customers on worldwide</p>
           </div>
           <div class="lift__achiviment-devider"></div>
           <div class="lift__achiviment-block">
-            <h2 class="title-h2 black">15+</h2>
+            <h2 class="title-h2 black" ref="hoursRef" data-value="15" data-increment="1" data-variable="hours">{{ hours }}<span v-show="hours === 15">+</span></h2>
             <p>Hours of work experience</p>
           </div>
           <div class="lift__achiviment-devider delete"></div>
           <div class="lift__achiviment-block">
-            <h2 class="title-h2 black">50+</h2>
+            <h2 class="title-h2 black" ref="membersRef" data-value="50" data-increment="2" data-variable="members">{{ members }}<span v-show="members === 50">+</span></h2>
             <p>Creativity & passionate members</p>
           </div>
           <div class="lift__achiviment-devider"></div>
           <div class="lift__achiviment-block">
-            <h2 class="title-h2 black">100+ </h2>
+            <h2 class="title-h2 black" ref="integrationsRef" data-value="100" data-increment="3" data-variable="integrations">{{ integrations }}<span v-show="integrations === 100">+</span></h2>
             <p>Integrations lorem ipsum integrations</p>
           </div>
         </div>

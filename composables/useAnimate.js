@@ -1,5 +1,4 @@
 // ~/composables/useAnimate.js
-import { ref, onMounted, onUnmounted } from 'vue';
 
 export function useAnimationObserver(callback, threshold = 0.8) {
   const elementRef = ref(null);

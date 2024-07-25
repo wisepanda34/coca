@@ -170,6 +170,7 @@ const modules = [Navigation, EffectFlip, Autoplay]
       width: 56px;
       height: 56px;
       border-radius: 50%;
+      overflow: hidden;
     }
     &__name {
       font-size: 18px;

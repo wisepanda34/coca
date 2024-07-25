@@ -173,14 +173,14 @@ export const customerSlides = [
   },
   {
     name: 'Dane Lewes',
-    avatar: '/images/ava-1.png',
+    avatar: '/images/have_fun.png',
     position: 'Product Manager, BCFRoom',
     rating: 4,
     text: '“Working with Agency was a game-changer. Their high-quality, innovative design boosted my websites visitor engagement remarkably.”'
   },
   {
     name: 'Gabbi Ronophas',
-    avatar: '/images/ava-1.png',
+    avatar: '/images/lead.png',
     position: 'CEO, Bright Lem',
     rating: 3,
     text: '“ Their high-quality, innovative design boosted my websites visitor engagement remarkably.”'

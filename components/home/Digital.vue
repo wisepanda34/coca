@@ -12,7 +12,7 @@ const digitalRef = useAnimationObserver(addAnimation);
     <div class="container">
       <div class="digital__wrapper">
 
-        <div class="digital__left animate-up" ref="digitalRef">
+        <div class="digital__left" >
           <h1 class="title-h1">Digitally forward creative</h1>
           <p class="slogan">Our biggest challenge is making sure we're always designing and building products that will help you run your business better.</p>
           <div class="digital__email">
@@ -22,7 +22,7 @@ const digitalRef = useAnimationObserver(addAnimation);
         </div>
 
 
-        <div class="digital__right">
+        <div class="digital__right animate-from-right" ref="digitalRef">
           <div class="digital__grafic">
             <div class="digital__growth"></div>
           </div>
