@@ -6,6 +6,25 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import { trendigSlides } from '~/constants';
 const modules = [Navigation]
+
+const isMobile = ref(false);
+
+const checkScreenSize = () => {
+  isMobile.value = window.innerWidth < 991;
+};
+
+onMounted(() => {
+  checkScreenSize();
+  window.addEventListener('resize', checkScreenSize);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('resize', checkScreenSize);
+});
+
+const shouldShowRound = (index) => {
+  return isMobile.value || (index + 1) % 2 === 0;
+};
 </script>
  
 <template>
@@ -17,24 +36,27 @@ const modules = [Navigation]
           
         <div class="trending__swiper">
           <swiper
+            ref="swiperRef"
             :modules="modules"
             navigation
-            :slides-per-view="1"
-            :space-between="32"
+            :slides-per-view="1.3"
+            :space-between="16"
             :loop="true"
             autoplay
             :breakpoints="{
               991: {
                 slidesPerView: 2,
+                slidesPerGroup: 2,
+                spaceBetween: 32
               },
             }"
           >
             <swiper-slide class="trending__slide" v-for="(item, index) in trendigSlides" :key="index">
               <div class="trending__image">
                 <NuxtImg :src="item.imageLink"/>
-                <!-- <div class="trending__round">
+                <div v-if="shouldShowRound(index)" class="trending__round">
                   <NuxtImg src="/svg/round.svg" alt="Slide icon"/>
-                </div> -->
+                </div>
               </div>
               <div class="trending__info motto-small">
                 <p>Published in Insight {{ item.published }}</p>
@@ -89,7 +111,6 @@ const modules = [Navigation]
     height: 0;
     padding-bottom: 57%;
     position: relative;
-    box-shadow: $shadow-2;
   }
   &__image img {
     position: absolute;
@@ -102,7 +123,7 @@ const modules = [Navigation]
   &__round {
     position: absolute;
     top: 50%;
-    right: -16px; 
+    left: -16px; 
     width: 80px; 
     height: 80px; 
     border-radius: 50%;
@@ -111,12 +132,8 @@ const modules = [Navigation]
     align-items: center;
     justify-content: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transform: translate(50%, -50%);
+    transform: translate(-50%, -50%);
     z-index: 1000;
-
-    img {
-        width: 100%; 
-      }
   }
  }
 
@@ -129,7 +146,9 @@ const modules = [Navigation]
       padding-bottom: 57%;
     }
     &__round {
-      display: none;
+      width: 50px; 
+      height: 50px;
+      left: -8px; 
     }
   }
 }

@@ -160,6 +160,12 @@ export const advertizes = [
     title: 'What makes an authentic employee profile, and why does it matter ?',
     published: 'Sep 17, 2024',
     author: 'Gregory Simson'
+  },
+  {
+    imageLink: '/images/slide-3.png',
+    title: 'What makes an authentic employee profile, and why does it matter ?',
+    published: 'Sep 17, 2024',
+    author: 'Gregory Simson'
   }
 ]
 

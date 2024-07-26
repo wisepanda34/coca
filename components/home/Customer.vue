@@ -33,6 +33,10 @@ const modules = [Navigation, EffectFlip, Autoplay]
               delay: 3000
             }"
             effect="flip"
+            flipEffect: {
+              slideShadows: true,
+              :speed="1000"
+            },
           >
             <swiper-slide class="customer__slide slide" v-for="(item, index) in customerSlides" :key="index">
               <div class="slide__rating">

@@ -4,19 +4,18 @@ import { partners } from '~/constants'
 import { useAnimationObserver } from '~/composables/useAnimate';
 import {addAnimation} from '~/utils/animate.js'
  
-const countRef = useAnimationObserver(addAnimation, 1);
-const partnersRef = useAnimationObserver(addAnimation, 1);
+const partnersLeftRef = useAnimationObserver(addAnimation, 1);
+const partnersRightRef = useAnimationObserver(addAnimation, 1);
 </script>
  
 <template>
   <section class="partners">
     <div class="container">
       <div class="partners__wrapper">
-        <div class="partners__left animate-from-left" ref="countRef">
-          <h2 class="title-h2">890+</h2>
-          <p class="motto">some big companies that we work with, and trust us very much</p>
+        <div class="partners__left animate-from-left" ref="partnersLeftRef">
+          <TheCounter text="Some big companies that we work with, and trust us very much" :end-value="890" :increment="20" :update-time="20"/>
         </div>
-        <div class="partners__right animate-from-right" ref="partnersRef">
+        <div class="partners__right animate-from-right" ref="partnersRightRef">
           <div class="partners__brand"
             v-for="(brand, index) in partners" 
             :key="index"
@@ -31,12 +30,12 @@ const partnersRef = useAnimationObserver(addAnimation, 1);
  
 <style scoped lang='scss'>
  .partners {
-    &__wrapper {
-      padding: 24px 0;
-
-      display: flex;
-      justify-content: center;
-      gap: 50px;
+   &__wrapper {
+     padding: 24px 0;
+     
+     display: flex;
+     justify-content: center;
+     gap: 50px;
     }
     &__left {
       width: 300px;
