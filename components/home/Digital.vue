@@ -21,11 +21,11 @@ const digitalRef = useAnimationObserver(addAnimation);
           </div>
         </div>
 
-        <div class="digital__right animate-from-right" ref="digitalRef">
+        <div ref="digitalRef" class="digital__right animate-from-right">
           <div class="digital__grafic">
-            <div class="digital__growth"></div>
+            <div class="digital__growth"/>
           </div>
-          <div class="digital__statistic"></div>
+          <div class="digital__statistic"/>
         </div>
 
       </div>

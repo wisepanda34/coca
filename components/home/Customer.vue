@@ -20,7 +20,7 @@ const modules = [Navigation, EffectFlip, Autoplay]
           <h3 class="title-h3">What our customer <br> are saying</h3>
           <p class="motto">We are trusted numerous companies from different business to meet their needs</p>
         </div>
-        <div class="customer__decor"></div>
+        <div class="customer__decor"/>
 
         <div class="customer__swiper">
           <swiper
@@ -35,7 +35,7 @@ const modules = [Navigation, EffectFlip, Autoplay]
             effect="flip"
             :speed="1000"
           >
-            <swiper-slide class="customer__slide slide" v-for="(item, index) in customerSlides" :key="index">
+            <swiper-slide v-for="(item, index) in customerSlides" :key="index" class="customer__slide slide">
               <div class="slide__rating">
                 <NuxtImg v-for="n in item.rating" :key="n" src="/svg/star.svg"/>
                 {{ item.rating }}

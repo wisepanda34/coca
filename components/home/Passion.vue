@@ -10,7 +10,7 @@ const passionRef = useAnimationObserver(addAnimation);
   <section class="passion">
     <div class="container">
       <div class="passion__wrapper">
-        <div class="passion__left animate-from-left" ref="passionRef">
+        <div ref="passionRef" class="passion__left animate-from-left">
           <NuxtImg src="/images/passion.png"/>
         </div>
 

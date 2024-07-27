@@ -38,22 +38,23 @@ const isMobile = computed(() => windowWidth.value !== null ? windowWidth.value <
             <p :class="['footer__top-descr', { 'black before-black': isWhiteRoute, 'grey': !isMobile && !isWhiteRoute, 'white': isMobile && !isWhiteRoute }]">Ask about Sans products, pricing, implementation, or anything else. Our highly trained reps are standing by, ready to help</p>
           </div>
           <div class="footer__top-btn">
-            <UIButton text="Try for free" :isWhite="isWhiteRoute"/>
+            <UIButton text="Try for free" :is-white="isWhiteRoute"/>
           </div>
         </div>
 
         <div class="footer__middle">
           <div class="footer__middle-content">
-            <TheLogo :isWhite="!isWhiteRoute"/>
+            <TheLogo :is-white="!isWhiteRoute"/>
             <p :class="[{ 'black': !isMobile && isWhiteRoute, 'grey': !isWhiteRoute || isMobile }]">We built an elegant solution. Our team created a fully integrated sales and marketing solution for SMBs</p>
           </div>
           <div class="links">
-            <div class="links__category" v-for="(category, index) in footerLinks" :key="index" >
+            <div  v-for="(category, index) in footerLinks" :key="index" class="links__category">
               <h3 class="links__title">{{ category.subtitle }}</h3>
-              <div class="links__item" 
-                :class="[{ 'black': isWhiteRoute, 'grey': !isWhiteRoute }]"
+              <div 
                 v-for="(path, name) in category.point" 
                 :key="name"
+                class="links__item" 
+                :class="[{ 'black': isWhiteRoute, 'grey': !isWhiteRoute }]"
               >
                 <NuxtLink :to="path">{{ name }}</NuxtLink>
               </div>
@@ -61,11 +62,11 @@ const isMobile = computed(() => windowWidth.value !== null ? windowWidth.value <
           </div>
         </div>
 
-        <div class="footer__line"></div>
+        <div class="footer__line"/>
 
         <div class="footer__bottom" :class="[{ 'center': !isMobile && isWhiteRoute }]">
           <div class="sociaty" :class="[{ 'none': !isMobile && isWhiteRoute}]">
-            <div class="sociaty__item" v-for="(item, index) in sociaties" :key="index">
+            <div  v-for="(item, index) in sociaties" :key="index" class="sociaty__item">
               <NuxtLink :to="item.link">
                 <NuxtImg v-if="!isWhiteRoute" class="sociaty__img" :src="item.srcWhite"/>
                 <NuxtImg v-else class="sociaty__img" :src="item.src"/>
@@ -74,15 +75,15 @@ const isMobile = computed(() => windowWidth.value !== null ? windowWidth.value <
           </div>
           <div class="info" :class="[{ 'none': !isMobile && isWhiteRoute}]">
             <div 
-              class="info__item" 
               v-for="(item, index) in info" 
               :key="index"
+              class="info__item" 
             >
               <NuxtLink :to="item.link">{{ item.title }}</NuxtLink>
             </div>
           </div>
           <div class="copyright">
-            <IconCopyright class="copyright__icon" :isWhite="!isMobile"/> 
+            <IconCopyright class="copyright__icon" :is-white="!isMobile"/> 
             <div :class="[{'grey' : !isMobile && isWhiteRoute}]">Copyright 2023, All Rights Reserved</div>
           </div>
         </div>

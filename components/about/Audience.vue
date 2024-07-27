@@ -13,20 +13,20 @@ import { audienceSlides } from '~/constants';
   <section class="audience">
     <div class="container">
       <div class="audience__wrapper">
-        <div class="audience__bg"></div>
+        <div class="audience__bg"/>
         <h1 class="audience__title title-h1">Everything you need to get the attention of your audience</h1>
         <div class="audience__content">
           <p class="audience__slogan slogan">
             Our digital agency helps clients develop, implement and maintain successful digital marketing strategies across all channels. Also work with you to build your website and create online businesses that grow.
           </p>
-          <div class="audience__stamp"></div>
+          <div class="audience__stamp"/>
         </div>
         <div class="audience__swiper">
           <swiper
             :modules="[Autoplay]"
             :slides-per-view="1"
             :space-between="16"
-            :centeredSlides="false"
+            :centered-slides="false"
             :loop="true"
             :autoplay="{
               delay: 3000
@@ -39,7 +39,7 @@ import { audienceSlides } from '~/constants';
               }
             }"
           >
-            <swiper-slide class="audience__slide slide" v-for="(item, index) in audienceSlides" :key="index">
+            <swiper-slide v-for="(item, index) in audienceSlides" :key="index" class="audience__slide slide">
               <div class="slide__wrapper">
                 <div class="slide__image-big">
                   <NuxtImg :src="item.imageBig" alt="img"/>
@@ -51,7 +51,7 @@ import { audienceSlides } from '~/constants';
                   </div>
                   <h4 class="title-h4">{{ item.title }}</h4>
                   <p class="motto">{{ item.descr }}</p>
-                  <UIButton text="See Details &#8594;" isWhite="false"/>
+                  <UIButton text="See Details &#8594;" is-white="false"/>
                 </div>
               </div>
             </swiper-slide>

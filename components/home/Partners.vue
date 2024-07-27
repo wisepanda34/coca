@@ -12,13 +12,14 @@ const partnersRightRef = useAnimationObserver(addAnimation, 1);
   <section class="partners">
     <div class="container">
       <div class="partners__wrapper">
-        <div class="partners__left animate-from-left" ref="partnersLeftRef">
+        <div ref="partnersLeftRef" class="partners__left animate-from-left">
           <TheCounter text="Some big companies that we work with, and trust us very much" :end-value="890" :increment="20" :update-time="20"/>
         </div>
-        <div class="partners__right animate-from-right" ref="partnersRightRef">
-          <div class="partners__brand"
+        <div ref="partnersRightRef" class="partners__right animate-from-right">
+          <div 
             v-for="(brand, index) in partners" 
             :key="index"
+            class="partners__brand"
           >
             <NuxtImg :src="brand.src" :alt="brand.name"/>
           </div>

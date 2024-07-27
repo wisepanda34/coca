@@ -12,7 +12,7 @@ const props = defineProps({
 </script>
  
 <template>
-  <div class="logo" :class="{white: isWhite}" @click="goToHome"></div>
+  <div class="logo" :class="{white: props.isWhite}" @click="goToHome"/>
 </template>
  
 <style scoped lang='scss'>

@@ -4,7 +4,7 @@
 </script>
  
 <template>
-  <div class="round"></div>
+  <div class="round"/>
 </template>
  
 <style scoped lang='scss'>

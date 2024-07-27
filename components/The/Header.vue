@@ -40,8 +40,8 @@ const closeMenu = () => {
                 <div>Contact Us </div>
                 <IconArrowBlack :is-blue="isContactRoute"/>
               </div>
-              <div class="contact__line-black" v-if="!isContactRoute"></div>
-              <div class="contact__line-blue" v-else></div>
+              <div v-if="!isContactRoute" class="contact__line-black"/>
+              <div v-else class="contact__line-blue"/>
             </NuxtLink>
           </nav>
           <div class="header__menu-close" @click="toggleMenu">
