@@ -192,3 +192,69 @@ export const customerSlides = [
     text: '“ Their high-quality, innovative design boosted my websites visitor engagement remarkably.”'
   }
 ]
+
+export const audienceSlides = [
+  {
+    imageMain: '/images/slide-3.png',
+    imageBig: '/images/work_on_laptop.png',
+    title: 'What we believe in',
+    descr: 'Over the years at Sans, we’ve put a lot of thought into what it is that makes us who we are. The qualities that unite us, that make us such an effective team, and...'
+  },
+  {
+    imageMain: '/images/skyrocketing.png',
+    imageBig: '/images/two_women.png',
+    title: 'How we achieve goals',
+    descr: 'Lot of thought into what it is that makes us who we are. The qualities that unite us, that make us such an effective team, and... Successful digital marketing strategies'
+  }
+]
+
+export const teamSlides = [
+  {
+    photo: '/images/Arlyne.png',
+    name: 'Arlyne Stefano',
+    position: 'Founder & CEO',
+    twitter: 'http://x.com',
+    linkedIn: 'http://linkedin.com',
+    instagram: 'http://instagram.com'
+  },
+  {
+    photo: '/images/Katy.png',
+    name: 'Katy Cristy',
+    position: 'Chief Technology Officer',
+    twitter: 'http://x.com',
+    linkedIn: 'http://linkedin.com',
+    instagram: 'http://instagram.com'
+  },
+  {
+    photo: '/images/Roger.png',
+    name: 'Roger Dzawin',
+    position: 'Chief Technology Officer',
+    twitter: 'http://x.com',
+    linkedIn: 'http://linkedin.com',
+    instagram: 'http://instagram.com'
+  },
+  {
+    photo: '/images/Arda.png',
+    name: 'Arda Guler',
+    position: 'Deputy CEO',
+    twitter: 'http://x.com',
+    linkedIn: 'http://linkedin.com',
+    instagram: 'http://instagram.com'
+  },
+  {
+    photo: '/images/Eva.png',
+    name: 'Eva Duhivny',
+    position: 'Chief DevOps',
+    twitter: 'http://x.com',
+    linkedIn: 'http://linkedin.com',
+    instagram: 'http://instagram.com'
+  },
+  {
+    photo: '/images/Jaison.png',
+    name: 'Jaison Dortes',
+    position: 'Project Manager',
+    twitter: 'http://x.com',
+    linkedIn: 'http://linkedin.com',
+    instagram: 'http://instagram.com'
+  },
+ ]

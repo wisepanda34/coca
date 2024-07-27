@@ -13,7 +13,6 @@ body {
   color: $text-main;
 }
 
-
 .site {
   position: relative;
   max-width: 1440px;
@@ -24,11 +23,9 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  
 }
 
 .page {
-  // background: yellow;
   min-height: 50vh;
 }
 
@@ -46,11 +43,6 @@ body {
   }
 }
 
-// @media (max-width: 900px) {
-//   .container {
-//     padding: 0 7px ;
-//   }
-// }
 img {
   width: 100%;
   height: 100%;
@@ -204,6 +196,11 @@ svg {
      background: $black;
     }
   }
+  .descr {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 150%;
+  }
   .motto {
     font-size: 18px;
     font-weight: 500;
@@ -231,11 +228,13 @@ svg {
    .slogan  {
     font-size: 26px;
    }
+   .descr {
+    font-size: 20px;
+   }
   }
   @media (max-width: 1179px) {
    .title-h1 {
      font-size: 50px;
-     text-align: center;
    }
    .title-h2 {
      font-size: 36px;
@@ -250,6 +249,9 @@ svg {
    .slogan  {
     font-size: 24px;
    }
+   .descr {
+    font-size: 18px;
+   }
    .motto-small {
     font-size: 12px;
     margin: 8px 0;
@@ -257,8 +259,7 @@ svg {
   }
   @media (max-width: 600px) {
    .title-h1 {
-     font-size: 40px;
-     text-align: center;
+     font-size: 32px;
    }
    .title-h2 {
      font-size: 26px;
@@ -282,6 +283,9 @@ svg {
       width: 35px;
       top: 10px;
     }
+   }
+   .descr {
+    font-size: 14px;
    }
   }
   

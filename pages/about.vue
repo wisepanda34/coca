@@ -1,14 +1,14 @@
 <!-- pages/about.vue -->
 <script setup>
+import Audience from '~/components/about/Audience.vue';
+import Team from '~/components/about/Team.vue';
  
 </script>
  
 <template>
-  <section class="">
-    
-  </section>
+  <div>
+    <Audience/>
+    <Team/>
+  </div>
 </template>
  
-<style scoped lang='scss'>
- 
-</style>

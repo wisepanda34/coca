@@ -30,8 +30,8 @@
  
 <style scoped lang='scss'>
  .button {
-  // width: 177px;
-  // height: 56px;
+  width: 177px;
+  height: 56px;
   border-radius: 28px;
   background: $white;
   color: $black;
@@ -61,6 +61,8 @@
  }
  @media (max-width: 991px) {
   .button {
+    width: 145px;
+    height: 45px;
     padding: 7px 34px;
     font-size: 14px;
   }

@@ -4,7 +4,7 @@ import { advertizes } from '~/constants';
 import { useAnimationObserver } from '~/composables/useAnimate';
 import {addAnimation} from '~/utils/animate.js'
  
-const advertizeRef = useAnimationObserver(addAnimation, 0.5);  
+const advertizeRef = useAnimationObserver(addAnimation, 0.2);  
 </script>
  
 <template>

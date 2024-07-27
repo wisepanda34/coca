@@ -32,7 +32,7 @@ const shouldShowRound = (index) => {
     <div class="container">
       <div class="trending__wrapper">
         <h3 class="title-h3 text-center">Trending news from Coca</h3>
-        <p class="motto text-center" >we have some new Service to pamper you</p>
+        <p class="motto text-center">we have some new Service to pamper you</p>
           
         <div class="trending__swiper">
           <swiper
@@ -48,15 +48,13 @@ const shouldShowRound = (index) => {
                 slidesPerView: 2,
                 slidesPerGroup: 2,
                 spaceBetween: 32
-              },
+              }
             }"
           >
             <swiper-slide class="trending__slide" v-for="(item, index) in trendigSlides" :key="index">
               <div class="trending__image">
                 <NuxtImg :src="item.imageLink"/>
-                <div v-if="shouldShowRound(index)" class="trending__round">
-                  <NuxtImg src="/svg/round.svg" alt="Slide icon"/>
-                </div>
+                <UIRound v-if="shouldShowRound(index)" class="trending__round"/>
               </div>
               <div class="trending__info motto-small">
                 <p>Published in Insight {{ item.published }}</p>
@@ -124,16 +122,8 @@ const shouldShowRound = (index) => {
     position: absolute;
     top: 50%;
     left: -16px; 
-    width: 80px; 
-    height: 80px; 
-    border-radius: 50%;
-    background: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transform: translate(-50%, -50%);
-    z-index: 1000;
+    
   }
  }
 
@@ -146,8 +136,6 @@ const shouldShowRound = (index) => {
       padding-bottom: 57%;
     }
     &__round {
-      width: 50px; 
-      height: 50px;
       left: -8px; 
     }
   }

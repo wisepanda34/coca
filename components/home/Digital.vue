@@ -21,7 +21,6 @@ const digitalRef = useAnimationObserver(addAnimation);
           </div>
         </div>
 
-
         <div class="digital__right animate-from-right" ref="digitalRef">
           <div class="digital__grafic">
             <div class="digital__growth"></div>
@@ -38,17 +37,30 @@ const digitalRef = useAnimationObserver(addAnimation);
  .digital {
 
   &__wrapper {
+    position: relative;
     min-height: 650px;
     display: flex;
     justify-content: space-between;
     gap: 20px;
     padding: 70px 0 70px;
+    &::before {
+      content: '';
+      position: absolute;
+      top: -20%;
+      left: 5%;
+      width: 100%;
+      height: 100%;
+      background-image: url('/images/bg-orange.png');
+      background-size: contain; 
+      background-repeat: no-repeat; 
+      z-index: -1;
+    }
   }
   &__left {
     flex: 0 1 50%;
   }
   &__email {
-
+    position: relative;
     display: flex;
     align-items: center;
     gap: 20px;

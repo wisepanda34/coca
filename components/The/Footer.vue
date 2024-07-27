@@ -101,11 +101,12 @@ const isMobile = computed(() => windowWidth.value !== null ? windowWidth.value <
     position: relative;
     background: $white;
     color: $black;
+    overflow: hidden;
     &::before {
       content: '';
       position: absolute;
-      top: 0;
-      left: 0;
+      top: -20%;
+      left: 10%;
       width: 100%;
       height: 100%;
       background-image: url('/public/images/bg-orange.png');
@@ -117,7 +118,7 @@ const isMobile = computed(() => windowWidth.value !== null ? windowWidth.value <
 
   &__wrapper {
     position: relative; 
-    padding: 70px 0 20px;
+    padding: 40px 0 20px;
     z-index: 2;
   }
 
@@ -234,11 +235,6 @@ const isMobile = computed(() => windowWidth.value !== null ? windowWidth.value <
  @media (max-width: 991px) {
   .footer {
     
-    &--white::before {
-      top: 0;
-      left: -15vw;
-    }
-  
     &__wrapper {
       padding: 20px 17px;
     }
