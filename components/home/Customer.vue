@@ -1,26 +1,31 @@
 <!-- Customer.vue -->
 <script setup>
-import { Navigation, EffectFlip, Autoplay } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/vue';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/autoplay';
-import 'swiper/css/effect-flip';
-import { customerSlides } from '~/constants';
-
+import { Navigation, EffectFlip, Autoplay } from 'swiper/modules'
+import { Swiper, SwiperSlide } from 'swiper/vue'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/autoplay'
+import 'swiper/css/effect-flip'
+import { customerSlides } from '~/constants'
 
 const modules = [Navigation, EffectFlip, Autoplay]
 </script>
- 
+
 <template>
   <section class="customer">
     <div class="container">
       <div class="customer__wrapper">
         <div class="customer__content">
-          <h3 class="title-h3">What our customer <br> are saying</h3>
-          <p class="motto">We are trusted numerous companies from different business to meet their needs</p>
+          <h3 class="title-h3">
+            What our customer <br />
+            are saying
+          </h3>
+          <p class="motto">
+            We are trusted numerous companies from different business to meet
+            their needs
+          </p>
         </div>
-        <div class="customer__decor"/>
+        <div class="customer__decor" />
 
         <div class="customer__swiper">
           <swiper
@@ -35,32 +40,39 @@ const modules = [Navigation, EffectFlip, Autoplay]
             effect="flip"
             :speed="1000"
           >
-            <swiper-slide v-for="(item, index) in customerSlides" :key="index" class="customer__slide slide">
+            <swiper-slide
+              v-for="(item, index) in customerSlides"
+              :key="index"
+              class="customer__slide slide"
+            >
               <div class="slide__rating">
-                <NuxtImg v-for="n in item.rating" :key="n" src="/svg/star.svg"/>
+                <NuxtImg
+                  v-for="n in item.rating"
+                  :key="n"
+                  src="/svg/star.svg"
+                />
                 {{ item.rating }}
               </div>
               <div class="slide__review">
                 {{ item.text }}
               </div>
-                <div class="slide__author">
-                  <div class="slide__avatar">
-                    <NuxtImg :src="item.avatar"/>
-                  </div>
-                  <p class="slide__name"> {{ item.name }}</p>
-                  <p class="slide__position"> {{ item.position }}</p>
+              <div class="slide__author">
+                <div class="slide__avatar">
+                  <NuxtImg :src="item.avatar" />
                 </div>
+                <p class="slide__name">{{ item.name }}</p>
+                <p class="slide__position">{{ item.position }}</p>
+              </div>
             </swiper-slide>
           </swiper>
-       </div>
+        </div>
       </div>
     </div>
   </section>
 </template>
- 
-<style scoped lang='scss'>
-.customer {
 
+<style scoped lang="scss">
+.customer {
   &__wrapper {
     padding: 5vw 0 10vw;
   }
@@ -85,19 +97,20 @@ const modules = [Navigation, EffectFlip, Autoplay]
     background-repeat: no-repeat;
     background-size: contain;
     margin-top: 24px;
-    @media (min-width: 991px) { 
+    @media (min-width: 991px) {
       margin-bottom: -20px;
     }
   }
-  &__swiper  { 
+  &__swiper {
     position: relative;
     margin-left: 160px;
 
-    .swiper ::v-deep(.swiper-button-prev)::after, ::v-deep(.swiper-button-next)::after {
+    .swiper ::v-deep(.swiper-button-prev)::after,
+    ::v-deep(.swiper-button-next)::after {
       content: none;
       font-family: inherit;
     }
-    .swiper ::v-deep(.swiper-button-prev){
+    .swiper ::v-deep(.swiper-button-prev) {
       top: auto;
       bottom: 0;
       left: auto;
@@ -116,7 +129,7 @@ const modules = [Navigation, EffectFlip, Autoplay]
         right: 42px;
       }
     }
-    .swiper ::v-deep(.swiper-button-next){
+    .swiper ::v-deep(.swiper-button-next) {
       top: auto;
       bottom: 0;
       width: 50px;
@@ -131,10 +144,9 @@ const modules = [Navigation, EffectFlip, Autoplay]
         width: 28px;
         height: 28px;
       }
-
     }
   }
-  &__slide .slide{
+  &__slide .slide {
     max-width: 900px;
     margin: 0 auto;
 
@@ -142,7 +154,7 @@ const modules = [Navigation, EffectFlip, Autoplay]
       display: flex;
       align-items: center;
       gap: 10px;
-      
+
       img {
         width: 20px;
         @media (max-width: 600px) {
@@ -187,7 +199,7 @@ const modules = [Navigation, EffectFlip, Autoplay]
       gap: 15px;
     }
   }
-} 
+}
 
 @media (max-width: 991px) {
   .customer {
@@ -202,7 +214,6 @@ const modules = [Navigation, EffectFlip, Autoplay]
 }
 @media (max-width: 600px) {
   .customer {
-
     &__slide .slide {
       &__review {
         font-size: 18px;
@@ -225,7 +236,7 @@ const modules = [Navigation, EffectFlip, Autoplay]
     }
   }
 }
-@media (max-width: 425px) { 
+@media (max-width: 425px) {
   .customer {
     &__slide {
       padding-bottom: 30px;

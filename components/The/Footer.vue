@@ -1,14 +1,14 @@
 <!-- components/Footer.vue -->
 <script setup>
-import {footerLinks, sociaties, info} from '~/constants/index.js'
+import { footerLinks, sociaties, info } from '~/constants/index.js'
 import { useRoute } from 'vue-router'
 import { computed } from 'vue'
 
 const route = useRoute()
 const isWhiteRoute = computed(() => {
   return route.path === '/' || route.path === '/blog'
-})  
- 
+})
+
 const windowWidth = ref(null)
 
 const handleResize = () => {
@@ -24,37 +24,64 @@ onUnmounted(() => {
   window.removeEventListener('resize', handleResize)
 })
 
-const isMobile = computed(() => windowWidth.value !== null ? windowWidth.value < 992 : false)
+const isMobile = computed(() =>
+  windowWidth.value !== null ? windowWidth.value < 992 : false
+)
 </script>
- 
+
 <template>
   <footer :class="['footer', { 'footer--white': isWhiteRoute }]">
     <div class="container">
       <div class="footer__wrapper">
-
         <div class="footer__top">
           <div>
             <h2 class="footer__top-title">Think beyond the wave</h2>
-            <p :class="['footer__top-descr', { 'black before-black': isWhiteRoute, 'grey': !isMobile && !isWhiteRoute, 'white': isMobile && !isWhiteRoute }]">Ask about Sans products, pricing, implementation, or anything else. Our highly trained reps are standing by, ready to help</p>
+            <p
+              :class="[
+                'footer__top-descr',
+                {
+                  'black before-black': isWhiteRoute,
+                  grey: !isMobile && !isWhiteRoute,
+                  white: isMobile && !isWhiteRoute
+                }
+              ]"
+            >
+              Ask about Sans products, pricing, implementation, or anything
+              else. Our highly trained reps are standing by, ready to help
+            </p>
           </div>
           <div class="footer__top-btn">
-            <UIButton text="Try for free" :is-white="isWhiteRoute"/>
+            <UIButton text="Try for free" :is-white="isWhiteRoute" />
           </div>
         </div>
 
         <div class="footer__middle">
           <div class="footer__middle-content">
-            <TheLogo :is-white="!isWhiteRoute"/>
-            <p :class="[{ 'black': !isMobile && isWhiteRoute, 'grey': !isWhiteRoute || isMobile }]">We built an elegant solution. Our team created a fully integrated sales and marketing solution for SMBs</p>
+            <TheLogo :is-white="!isWhiteRoute" />
+            <p
+              :class="[
+                {
+                  black: !isMobile && isWhiteRoute,
+                  grey: !isWhiteRoute || isMobile
+                }
+              ]"
+            >
+              We built an elegant solution. Our team created a fully integrated
+              sales and marketing solution for SMBs
+            </p>
           </div>
           <div class="links">
-            <div  v-for="(category, index) in footerLinks" :key="index" class="links__category">
+            <div
+              v-for="(category, index) in footerLinks"
+              :key="index"
+              class="links__category"
+            >
               <h3 class="links__title">{{ category.subtitle }}</h3>
-              <div 
-                v-for="(path, name) in category.point" 
+              <div
+                v-for="(path, name) in category.point"
                 :key="name"
-                class="links__item" 
-                :class="[{ 'black': isWhiteRoute, 'grey': !isWhiteRoute }]"
+                class="links__item"
+                :class="[{ black: isWhiteRoute, grey: !isWhiteRoute }]"
               >
                 <NuxtLink :to="path">{{ name }}</NuxtLink>
               </div>
@@ -62,43 +89,50 @@ const isMobile = computed(() => windowWidth.value !== null ? windowWidth.value <
           </div>
         </div>
 
-        <div class="footer__line"/>
+        <div class="footer__line" />
 
-        <div class="footer__bottom" :class="[{ 'center': !isMobile && isWhiteRoute }]">
-          <div class="sociaty" :class="[{ 'none': !isMobile && isWhiteRoute}]">
-            <div  v-for="(item, index) in sociaties" :key="index" class="sociaty__item">
+        <div
+          class="footer__bottom"
+          :class="[{ center: !isMobile && isWhiteRoute }]"
+        >
+          <div class="sociaty" :class="[{ none: !isMobile && isWhiteRoute }]">
+            <div
+              v-for="(item, index) in sociaties"
+              :key="index"
+              class="sociaty__item"
+            >
               <NuxtLink :to="item.link">
-                <NuxtImg v-if="!isWhiteRoute" class="sociaty__img" :src="item.srcWhite"/>
-                <NuxtImg v-else class="sociaty__img" :src="item.src"/>
+                <NuxtImg
+                  v-if="!isWhiteRoute"
+                  class="sociaty__img"
+                  :src="item.srcWhite"
+                />
+                <NuxtImg v-else class="sociaty__img" :src="item.src" />
               </NuxtLink>
             </div>
           </div>
-          <div class="info" :class="[{ 'none': !isMobile && isWhiteRoute}]">
-            <div 
-              v-for="(item, index) in info" 
-              :key="index"
-              class="info__item" 
-            >
+          <div class="info" :class="[{ none: !isMobile && isWhiteRoute }]">
+            <div v-for="(item, index) in info" :key="index" class="info__item">
               <NuxtLink :to="item.link">{{ item.title }}</NuxtLink>
             </div>
           </div>
           <div class="copyright">
-            <IconCopyright class="copyright__icon" :is-white="!isMobile"/> 
-            <div :class="[{'grey' : !isMobile && isWhiteRoute}]">Copyright 2023, All Rights Reserved</div>
+            <IconCopyright class="copyright__icon" :is-white="!isMobile" />
+            <div :class="[{ grey: !isMobile && isWhiteRoute }]">
+              Copyright 2023, All Rights Reserved
+            </div>
           </div>
         </div>
-
       </div>
     </div>
   </footer>
 </template>
- 
-<style scoped lang='scss'>
 
- .footer {
+<style scoped lang="scss">
+.footer {
   background: $black;
   color: $white;
-  &--white{
+  &--white {
     position: relative;
     background: $white;
     color: $black;
@@ -111,14 +145,14 @@ const isMobile = computed(() => windowWidth.value !== null ? windowWidth.value <
       width: 100%;
       height: 100%;
       background-image: url('/public/images/bg-orange.png');
-      background-size: contain; 
-      background-repeat: no-repeat; 
+      background-size: contain;
+      background-repeat: no-repeat;
       z-index: 1;
     }
   }
 
   &__wrapper {
-    position: relative; 
+    position: relative;
     padding: 40px 0 20px;
     z-index: 2;
   }
@@ -151,10 +185,10 @@ const isMobile = computed(() => windowWidth.value !== null ? windowWidth.value <
 
     font-size: 16px;
     line-height: 26px;
-    
+
     &-content {
       width: 292px;
-      padding-top: 10px; 
+      padding-top: 10px;
     }
     .links {
       width: 100%;
@@ -171,7 +205,7 @@ const isMobile = computed(() => windowWidth.value !== null ? windowWidth.value <
         transition: all 0.2s ease;
 
         &:hover {
-         color: $grey-text-2; 
+          color: $grey-text-2;
         }
       }
       &__item.grey:hover {
@@ -196,7 +230,6 @@ const isMobile = computed(() => windowWidth.value !== null ? windowWidth.value <
     font-weight: 500;
     letter-spacing: 1px;
     .sociaty {
-
       display: flex;
       align-items: center;
       gap: 24px;
@@ -210,7 +243,7 @@ const isMobile = computed(() => windowWidth.value !== null ? windowWidth.value <
       display: flex;
       gap: 40px;
       flex-wrap: wrap;
-      
+
       &__item {
         text-wrap: nowrap;
         transition: all 0.2s ease;
@@ -230,16 +263,14 @@ const isMobile = computed(() => windowWidth.value !== null ? windowWidth.value <
       }
     }
   }
- }
- 
+}
 
- @media (max-width: 991px) {
+@media (max-width: 991px) {
   .footer {
-    
     &__wrapper {
       padding: 20px 17px;
     }
-    
+
     &__top {
       flex-direction: column;
       padding: 20px 0;
@@ -290,9 +321,9 @@ const isMobile = computed(() => windowWidth.value !== null ? windowWidth.value <
       }
     }
   }
- }
+}
 
- @media (max-width: 600px) {
+@media (max-width: 600px) {
   .footer {
     &__top {
       &-btn {
@@ -306,8 +337,8 @@ const isMobile = computed(() => windowWidth.value !== null ? windowWidth.value <
       }
     }
   }
- }
- @media (max-width: 420px) {
+}
+@media (max-width: 420px) {
   .footer {
     &__top {
       &-title {
@@ -323,5 +354,5 @@ const isMobile = computed(() => windowWidth.value !== null ? windowWidth.value <
       }
     }
   }
- }
+}
 </style>

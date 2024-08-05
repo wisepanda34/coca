@@ -1,14 +1,8 @@
 <!-- pages/pricing.vue -->
-<script setup>
- 
-</script>
- 
+<script setup></script>
+
 <template>
-  <section class="">
-    
-  </section>
+  <section class="" />
 </template>
- 
-<style scoped lang='scss'>
- 
-</style>
+
+<style scoped lang="scss"></style>

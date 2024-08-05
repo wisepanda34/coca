@@ -1,6 +1,6 @@
 <!-- componennts/The/Counter.vue -->
 <script setup>
-import { useAnimationObserver } from '~/composables/useAnimate';
+import { useAnimationObserver } from '~/composables/useAnimate'
 
 const props = defineProps({
   text: {
@@ -23,40 +23,41 @@ const props = defineProps({
     type: String,
     default: '+'
   }
-});
+})
 
-const counter = ref(0);
+const counter = ref(0)
 
 const counterGrowth = () => {
-  let isIncremented = false;
+  let isIncremented = false
 
   const incrementValue = () => {
     if (counter.value < props.endValue && !isIncremented) {
-      counter.value = Number(counter.value) + Number(props.increment);
-      setTimeout(incrementValue, props.updateTime); 
+      counter.value = Number(counter.value) + Number(props.increment)
+      setTimeout(incrementValue, props.updateTime)
     } else {
-      counter.value = props.endValue;
-      isIncremented = true;
+      counter.value = props.endValue
+      isIncremented = true
     }
-  };
+  }
 
-  incrementValue(); 
-};
+  incrementValue()
+}
 
-const counterRef = useAnimationObserver(counterGrowth, 1);
+const counterRef = useAnimationObserver(counterGrowth, 1)
 </script>
 
 <template>
   <div class="counter">
-    <h2 class="counter__title black" ref="counterRef">
-      {{ counter }}<span v-if="counter === props.endValue">{{ props.symbol }}</span>
+    <h2 ref="counterRef" class="counter__title black">
+      {{ counter
+      }}<span v-if="counter === props.endValue">{{ props.symbol }}</span>
     </h2>
     <p class="couner__descr">{{ props.text }}</p>
   </div>
 </template>
 
-<style scoped lang='scss'>
- .counter {
+<style scoped lang="scss">
+.counter {
   &__title {
     font-size: 64px;
     font-weight: 700;
@@ -67,15 +68,15 @@ const counterRef = useAnimationObserver(counterGrowth, 1);
     font-size: 18px;
     line-height: 178%;
   }
- }
- @media (max-width: 600px) { 
- .counter {
-  &__title {
-    font-size: 32px;
+}
+@media (max-width: 600px) {
+  .counter {
+    &__title {
+      font-size: 32px;
+    }
+    &__descr {
+      font-size: 16px;
+    }
   }
-  &__descr {
-    font-size: 16px;
-  }
- }
- }
+}
 </style>

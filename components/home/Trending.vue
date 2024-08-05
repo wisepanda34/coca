@@ -1,39 +1,39 @@
 <!-- Trending.vue -->
 <script setup>
-import { Navigation } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/vue';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import { trendigSlides } from '~/constants';
+import { Navigation } from 'swiper/modules'
+import { Swiper, SwiperSlide } from 'swiper/vue'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import { trendigSlides } from '~/constants'
 const modules = [Navigation]
 
-const isMobile = ref(false);
+const isMobile = ref(false)
 
 const checkScreenSize = () => {
-  isMobile.value = window.innerWidth < 991;
-};
+  isMobile.value = window.innerWidth < 991
+}
 
 onMounted(() => {
-  checkScreenSize();
-  window.addEventListener('resize', checkScreenSize);
-});
+  checkScreenSize()
+  window.addEventListener('resize', checkScreenSize)
+})
 
 onUnmounted(() => {
-  window.removeEventListener('resize', checkScreenSize);
-});
+  window.removeEventListener('resize', checkScreenSize)
+})
 
 const shouldShowRound = (index) => {
-  return isMobile.value || (index + 1) % 2 === 0;
-};
+  return isMobile.value || (index + 1) % 2 === 0
+}
 </script>
- 
+
 <template>
   <section class="trending">
     <div class="container">
       <div class="trending__wrapper">
         <h3 class="title-h3 text-center">Trending news from Coca</h3>
         <p class="motto text-center">we have some new Service to pamper you</p>
-          
+
         <div class="trending__swiper">
           <swiper
             ref="swiperRef"
@@ -51,30 +51,33 @@ const shouldShowRound = (index) => {
               }
             }"
           >
-            <swiper-slide class="trending__slide" v-for="(item, index) in trendigSlides" :key="index">
+            <swiper-slide
+              v-for="(item, index) in trendigSlides"
+              :key="index"
+              class="trending__slide"
+            >
               <div class="trending__image">
-                <NuxtImg :src="item.imageLink"/>
-                <UIRound v-if="shouldShowRound(index)" class="trending__round"/>
+                <NuxtImg :src="item.imageLink" />
+                <UIRound
+                  v-if="shouldShowRound(index)"
+                  class="trending__round"
+                />
               </div>
               <div class="trending__info motto-small">
                 <p>Published in Insight {{ item.published }}</p>
                 <p>by : {{ item.author }}</p>
               </div>
               <h4 class="title-h4">{{ item.title }}</h4>
-              
             </swiper-slide>
-  
           </swiper>
         </div>
       </div>
     </div>
-    
   </section>
 </template>
- 
-<style lang='scss'>
- .trending {
 
+<style lang="scss">
+.trending {
   &__wrapper {
     padding: 4vw 0 6vw;
   }
@@ -84,20 +87,19 @@ const shouldShowRound = (index) => {
   &__swiper {
     position: relative;
     margin-top: 6vw;
-    
+
     .swiper-button-prev {
-      display: none;  
-      color: #2ccb04!important; 
+      display: none;
+      color: #2ccb04 !important;
       background: $white;
     }
     .swiper-button-next {
       display: none;
-      color: red; 
+      color: red;
       background: black;
     }
   }
-  &__slide{
-
+  &__slide {
   }
   &__info {
     display: flex;
@@ -121,24 +123,21 @@ const shouldShowRound = (index) => {
   &__round {
     position: absolute;
     top: 50%;
-    left: -16px; 
+    left: -16px;
     transform: translate(-50%, -50%);
-    
   }
- }
+}
 
 @media (max-width: 991px) {
   .trending {
-
     &__image {
       max-width: 100%;
       height: 0;
       padding-bottom: 57%;
     }
     &__round {
-      left: -8px; 
+      left: -8px;
     }
   }
 }
-
 </style>

@@ -1,70 +1,98 @@
 <!-- components/The/Header.vue -->
 <script setup>
-import { useRoute } from 'vue-router';
+import { useRoute } from 'vue-router'
 
-const route = useRoute();
+const route = useRoute()
 const isMenuOpen = ref(false)
-const isContactRoute = computed(() => route.path === '/contact');
+const isContactRoute = computed(() => route.path === '/contact')
 
 const toggleMenu = () => {
   if (window.innerWidth <= 991) {
     isMenuOpen.value = !isMenuOpen.value
     if (isMenuOpen.value) {
-        document.body.classList.add('no-scroll')
+      document.body.classList.add('no-scroll')
     } else {
       document.body.classList.remove('no-scroll')
     }
   }
 }
 const closeMenu = () => {
-  if(window.innerWidth <= 991){
+  if (window.innerWidth <= 991) {
     toggleMenu()
   }
 }
-
 </script>
- 
+
 <template>
   <header class="header">
     <div class="container">
       <div class="header__wrapper">
-        <TheLogo/>
-        <div class="header__menu" :class="{open: isMenuOpen}">
+        <TheLogo />
+        <div class="header__menu" :class="{ open: isMenuOpen }">
           <nav class="header__nav">
-            <NuxtLink class="header__nav-item" to="/" exact-active-class="active" @click="closeMenu">Home</NuxtLink>
-            <NuxtLink class="header__nav-item" to="/about" exact-active-class="active" @click="closeMenu">About</NuxtLink>
-            <NuxtLink class="header__nav-item" to="/blog" exact-active-class="active" @click="closeMenu">Blog</NuxtLink>
-            <NuxtLink class="header__nav-item" to="/pricing" exact-active-class="active" @click="closeMenu">Pricing</NuxtLink>
-            <NuxtLink class="header__nav-item contact " to="/contact" exact-active-class="active" @click="closeMenu">
+            <NuxtLink
+              class="header__nav-item"
+              to="/"
+              exact-active-class="active"
+              @click="closeMenu"
+              >Home</NuxtLink
+            >
+            <NuxtLink
+              class="header__nav-item"
+              to="/about"
+              exact-active-class="active"
+              @click="closeMenu"
+              >About</NuxtLink
+            >
+            <NuxtLink
+              class="header__nav-item"
+              to="/blog"
+              exact-active-class="active"
+              @click="closeMenu"
+              >Blog</NuxtLink
+            >
+            <NuxtLink
+              class="header__nav-item"
+              to="/pricing"
+              exact-active-class="active"
+              @click="closeMenu"
+              >Pricing</NuxtLink
+            >
+            <NuxtLink
+              class="header__nav-item contact"
+              to="/contact"
+              exact-active-class="active"
+              @click="closeMenu"
+            >
               <div class="flex-center gap-5">
-                <div>Contact Us </div>
-                <IconArrowBlack :is-blue="isContactRoute"/>
+                <div>Contact Us</div>
+                <IconArrowBlack :is-blue="isContactRoute" />
               </div>
-              <div v-if="!isContactRoute" class="contact__line-black"/>
-              <div v-else class="contact__line-blue"/>
+              <div v-if="!isContactRoute" class="contact__line-black" />
+              <div v-else class="contact__line-blue" />
             </NuxtLink>
           </nav>
           <div class="header__menu-close" @click="toggleMenu">
-            <IconClose/>
+            <IconClose />
           </div>
         </div>
         <div class="header__burger" @click="toggleMenu">
-          <IconBurger/>
+          <IconBurger />
         </div>
       </div>
     </div>
   </header>
 </template>
- 
-<style scoped lang='scss'>
- .header {
+
+<style scoped lang="scss">
+.header {
   &__wrapper {
     height: 114px;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  &__menu-close { 
+  &__menu-close {
     display: none;
   }
   &__nav {
@@ -78,13 +106,13 @@ const closeMenu = () => {
       font-weight: 600;
       margin-left: 36px;
       gap: 5px;
-      
+
       &__line-black {
         width: 100%;
         height: 1.6px;
         background: $black;
       }
-      &__line-blue{
+      &__line-blue {
         width: 100%;
         height: 1.6px;
         background: $blue-primary;
@@ -98,9 +126,9 @@ const closeMenu = () => {
   &__burger {
     display: none;
   }
- }
+}
 
- @media (max-width: 991px) {
+@media (max-width: 991px) {
   .header {
     &__wrapper {
       height: 100px;
@@ -117,7 +145,7 @@ const closeMenu = () => {
       padding-top: 20vh;
 
       transform: translateX(-120%);
-      transition: transform .5s ease-out;
+      transition: transform 0.5s ease-out;
 
       &-close {
         display: block;
@@ -127,7 +155,7 @@ const closeMenu = () => {
       }
     }
     &__menu.open {
-        transform: translateX(0);
+      transform: translateX(0);
     }
     &__nav {
       margin: 0 auto;
@@ -142,5 +170,5 @@ const closeMenu = () => {
       display: block;
     }
   }
- }
+}
 </style>

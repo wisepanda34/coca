@@ -1,35 +1,45 @@
 <!-- Passion.vue -->
 <script setup>
-import { useAnimationObserver } from '~/composables/useAnimate';
-import {addAnimation} from '~/utils/animate.js'
- 
-const passionRef = useAnimationObserver(addAnimation);   
+import { useAnimationObserver } from '~/composables/useAnimate'
+import { addAnimation } from '~/utils/animate.js'
+
+const passionRef = useAnimationObserver(addAnimation)
 </script>
- 
+
 <template>
   <section class="passion">
     <div class="container">
       <div class="passion__wrapper">
         <div ref="passionRef" class="passion__left animate-from-left">
-          <NuxtImg src="/images/passion.png"/>
+          <NuxtImg src="/images/passion.png" />
         </div>
 
         <div class="passion__right">
-          <h3 class="title-h3">Passion to increase company revenue up to 85%</h3>
-          <div class="passion__motto">Automate your sales, marketing and service in one platform. Avoid date leaks and enable consistent messaging</div>
+          <h3 class="title-h3">
+            Passion to increase company revenue up to 85%
+          </h3>
+          <div class="passion__motto">
+            Automate your sales, marketing and service in one platform. Avoid
+            date leaks and enable consistent messaging
+          </div>
           <ul class="passion__list">
             <li>Close more deals with single - page contact managment</li>
-            <li>Enjoy one-click calling, call scripts and voicemail automation</li>
-            <li>Take stages and milestones of your deals to keep the sales process an track</li>
+            <li>
+              Enjoy one-click calling, call scripts and voicemail automation
+            </li>
+            <li>
+              Take stages and milestones of your deals to keep the sales process
+              an track
+            </li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 </template>
- 
-<style scoped lang='scss'>
- .passion {
+
+<style scoped lang="scss">
+.passion {
   &__wrapper {
     padding: 160px 0 90px;
 
@@ -66,8 +76,8 @@ const passionRef = useAnimationObserver(addAnimation);
       }
     }
   }
- }
- @media (max-width: 991px) {
+}
+@media (max-width: 991px) {
   .passion {
     &__wrapper {
       padding: 8vw 0 4vw;
@@ -85,12 +95,12 @@ const passionRef = useAnimationObserver(addAnimation);
       margin: 0 auto;
     }
   }
- }
- @media (max-width: 600px) {
+}
+@media (max-width: 600px) {
   .passion {
     &__right {
       width: 100%;
     }
   }
- }
+}
 </style>

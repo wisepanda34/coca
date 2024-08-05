@@ -1,24 +1,34 @@
 <!-- Advertize.vue -->
 <script setup>
-import { advertizes } from '~/constants';
-import { useAnimationObserver } from '~/composables/useAnimate';
-import {addAnimation} from '~/utils/animate.js'
- 
-const advertizeRef = useAnimationObserver(addAnimation, 0.2);  
+import { advertizes } from '~/constants'
+import { useAnimationObserver } from '~/composables/useAnimate'
+import { addAnimation } from '~/utils/animate.js'
+
+const advertizeRef = useAnimationObserver(addAnimation, 0.2)
 </script>
- 
+
 <template>
   <section class="advertize">
     <div class="container">
       <div class="advertize__wrapper">
-        <h3 class="advertize__title title-h3">Advertise, analyze, and optimize! We do it all for you</h3>
-        <p class="advertize__motto motto">Build more meaningful and lasting relationships - better understand their needs, identify new opportunities to help address any problems faster</p>
-        <div ref="advertizeRef" class="advertize__advantages animate-up" >
-          <div v-for="(item, index) in advertizes" :key="index" class="advertize__block" >
+        <h3 class="advertize__title title-h3">
+          Advertise, analyze, and optimize! We do it all for you
+        </h3>
+        <p class="advertize__motto motto">
+          Build more meaningful and lasting relationships - better understand
+          their needs, identify new opportunities to help address any problems
+          faster
+        </p>
+        <div ref="advertizeRef" class="advertize__advantages animate-up">
+          <div
+            v-for="(item, index) in advertizes"
+            :key="index"
+            class="advertize__block"
+          >
             <div class="advertize__block-image">
-              <NuxtImg :src="item.imageLink" :alt="item.imageLink"/>
+              <NuxtImg :src="item.imageLink" :alt="item.imageLink" />
               <div class="advertize__block-round flex-center">
-                <NuxtImg :src="item.icon"/>
+                <NuxtImg :src="item.icon" />
               </div>
             </div>
             <div class="advertize__block-content">
@@ -31,9 +41,9 @@ const advertizeRef = useAnimationObserver(addAnimation, 0.2);
     </div>
   </section>
 </template>
- 
-<style scoped lang='scss'>
- .advertize {
+
+<style scoped lang="scss">
+.advertize {
   &__wrapper {
     padding: 160px 0 100px;
   }
@@ -69,15 +79,15 @@ const advertizeRef = useAnimationObserver(addAnimation, 0.2);
       background: rgba(22, 26, 52, 0.7);
       opacity: 0.8;
 
-     img {
-      width: 24px;
-      height: 24px;
-      object-fit: contain;
-     } 
+      img {
+        width: 24px;
+        height: 24px;
+        object-fit: contain;
+      }
     }
   }
- }
- @media (max-width: 991px) {
+}
+@media (max-width: 991px) {
   .advertize {
     &__wrapper {
       padding: 5vw 0;
@@ -86,8 +96,8 @@ const advertizeRef = useAnimationObserver(addAnimation, 0.2);
       grid-template-columns: 1fr;
     }
   }
- }
- @media (max-width: 600px) {
+}
+@media (max-width: 600px) {
   .advertize {
     &__block-round {
       top: 15px;
@@ -101,5 +111,5 @@ const advertizeRef = useAnimationObserver(addAnimation, 0.2);
       }
     }
   }
- }
+}
 </style>

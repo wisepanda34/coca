@@ -1,42 +1,42 @@
-// constants/index.js 
+// constants/index.js
 
- export const footerLinks = [
+export const footerLinks = [
   {
     subtitle: 'Company',
     point: {
-      'About': '/about',
-      'Pricing': '/pricing',
-      'Jobs': '/',
-      'Blog': '/blog',
+      About: '/about',
+      Pricing: '/pricing',
+      Jobs: '/',
+      Blog: '/blog'
     }
   },
   {
     subtitle: 'Product',
     point: {
       'Sales Software': '#',
-      'Marketplace': '#',
+      Marketplace: '#',
       'Terms & Conditions': '#',
-      'Privacy Policy': '#',
+      'Privacy Policy': '#'
     }
   },
   {
     subtitle: 'Discover',
     point: {
-     'CRM Comparision': '#',
-     'Partner Program': '#',
-     'What is CRM': '#',
-     'Resource': '#',
+      'CRM Comparision': '#',
+      'Partner Program': '#',
+      'What is CRM': '#',
+      Resource: '#'
     }
   },
   {
     subtitle: 'Help Center',
     point: {
-      'Community': '#',
+      Community: '#',
       'Knowledge Base': '#',
-      'Academy': '#',
-      'Support': '#',
+      Academy: '#',
+      Support: '#'
     }
-  },
+  }
 ]
 
 export const sociaties = [
@@ -113,36 +113,40 @@ export const partners = [
   {
     name: 'OYO',
     src: '/images/oyo.png'
-  },
+  }
 ]
 export const advertizes = [
   {
     imageLink: '/images/lead.png',
     icon: '/svg/lead.svg',
     title: 'Lead happiness for customers',
-    motto: 'Build more meaningful and lasting relationships - better understand their needs, identify new opportunities to help address any problems faster'
+    motto:
+      'Build more meaningful and lasting relationships - better understand their needs, identify new opportunities to help address any problems faster'
   },
   {
     imageLink: '/images/mutually.png',
     icon: '/svg/mutually.svg',
     title: 'Mutually support each other',
-    motto: 'Build more meaningful and lasting relationships - better understand their needs, identify new opportunities to help address any problems faster'
+    motto:
+      'Build more meaningful and lasting relationships - better understand their needs, identify new opportunities to help address any problems faster'
   },
   {
     imageLink: '/images/have_fun.png',
     icon: '/svg/have_fun.svg',
     title: 'Have fun growing together',
-    motto: 'Build more meaningful and lasting relationships - better understand their needs, identify new opportunities to help address any problems faster'
+    motto:
+      'Build more meaningful and lasting relationships - better understand their needs, identify new opportunities to help address any problems faster'
   },
   {
     imageLink: '/images/make_business.png',
     icon: '/svg/make_business.svg',
     title: 'Make Your Business Grow',
-    motto: 'Build more meaningful and lasting relationships - better understand their needs, identify new opportunities to help address any problems faster'
+    motto:
+      'Build more meaningful and lasting relationships - better understand their needs, identify new opportunities to help address any problems faster'
   }
- ]
+]
 
- export const trendigSlides = [
+export const trendigSlides = [
   {
     imageLink: '/images/whats_makes.png',
     title: 'What makes an authentic employee profile, and why does it matter?',
@@ -198,13 +202,15 @@ export const audienceSlides = [
     imageMain: '/images/slide-3.png',
     imageBig: '/images/work_on_laptop.png',
     title: 'What we believe in',
-    descr: 'Over the years at Sans, we’ve put a lot of thought into what it is that makes us who we are. The qualities that unite us, that make us such an effective team, and...'
+    descr:
+      'Over the years at Sans, we’ve put a lot of thought into what it is that makes us who we are. The qualities that unite us, that make us such an effective team, and...'
   },
   {
     imageMain: '/images/skyrocketing.png',
     imageBig: '/images/two_women.png',
     title: 'How we achieve goals',
-    descr: 'Lot of thought into what it is that makes us who we are. The qualities that unite us, that make us such an effective team, and... Successful digital marketing strategies'
+    descr:
+      'Lot of thought into what it is that makes us who we are. The qualities that unite us, that make us such an effective team, and... Successful digital marketing strategies'
   }
 ]
 
@@ -256,5 +262,5 @@ export const teamSlides = [
     twitter: 'http://x.com',
     linkedIn: 'http://linkedin.com',
     instagram: 'http://instagram.com'
-  },
- ]
+  }
+]

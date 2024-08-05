@@ -1,25 +1,28 @@
 <!-- Audience.vue -->
 <script setup>
-import { Swiper, SwiperSlide } from 'swiper/vue';
-import { Autoplay } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/autoplay';
-import { audienceSlides } from '~/constants';
-
-
+import { Swiper, SwiperSlide } from 'swiper/vue'
+import { Autoplay } from 'swiper/modules'
+import 'swiper/css'
+import 'swiper/css/autoplay'
+import { audienceSlides } from '~/constants'
 </script>
- 
+
 <template>
   <section class="audience">
     <div class="container">
       <div class="audience__wrapper">
-        <div class="audience__bg"/>
-        <h1 class="audience__title title-h1">Everything you need to get the attention of your audience</h1>
+        <div class="audience__bg" />
+        <h1 class="audience__title title-h1">
+          Everything you need to get the attention of your audience
+        </h1>
         <div class="audience__content">
           <p class="audience__slogan slogan">
-            Our digital agency helps clients develop, implement and maintain successful digital marketing strategies across all channels. Also work with you to build your website and create online businesses that grow.
+            Our digital agency helps clients develop, implement and maintain
+            successful digital marketing strategies across all channels. Also
+            work with you to build your website and create online businesses
+            that grow.
           </p>
-          <div class="audience__stamp"/>
+          <div class="audience__stamp" />
         </div>
         <div class="audience__swiper">
           <swiper
@@ -39,19 +42,23 @@ import { audienceSlides } from '~/constants';
               }
             }"
           >
-            <swiper-slide v-for="(item, index) in audienceSlides" :key="index" class="audience__slide slide">
+            <swiper-slide
+              v-for="(item, index) in audienceSlides"
+              :key="index"
+              class="audience__slide slide"
+            >
               <div class="slide__wrapper">
                 <div class="slide__image-big">
-                  <NuxtImg :src="item.imageBig" alt="img"/>
-                  <UIRound class="slide__round"/>
+                  <NuxtImg :src="item.imageBig" alt="img" />
+                  <UIRound class="slide__round" />
                 </div>
                 <div class="slide__block">
                   <div class="slide__block-image">
-                    <NuxtImg  :src="item.imageMain" alt="img"/>
+                    <NuxtImg :src="item.imageMain" alt="img" />
                   </div>
                   <h4 class="title-h4">{{ item.title }}</h4>
                   <p class="motto">{{ item.descr }}</p>
-                  <UIButton text="See Details &#8594;" is-white="false"/>
+                  <UIButton text="See Details &#8594;" is-white="false" />
                 </div>
               </div>
             </swiper-slide>
@@ -59,20 +66,22 @@ import { audienceSlides } from '~/constants';
         </div>
         <div class="audience__bottom">
           <h3 class="title-h3">Powerful ideas & sales acceleration</h3>
-          <p class="descr">We are a software development firm specializing in digital products. We build beautiful, functional and cross-platform solutions that are accessible to all.</p>
+          <p class="descr">
+            We are a software development firm specializing in digital products.
+            We build beautiful, functional and cross-platform solutions that are
+            accessible to all.
+          </p>
         </div>
       </div>
     </div>
   </section>
 </template>
- 
-<style scoped lang='scss'>
- .audience {
 
+<style scoped lang="scss">
+.audience {
   &__wrapper {
     position: relative;
     padding: 70px 0;
-
   }
   &__title {
     max-width: 950px;
@@ -96,7 +105,7 @@ import { audienceSlides } from '~/constants';
   }
   &__swiper {
     position: relative;
-    
+
     &::before {
       content: '';
       position: absolute;
@@ -105,8 +114,8 @@ import { audienceSlides } from '~/constants';
       width: 40vw;
       height: 40vw;
       background-image: url('/images/bg-orange.png');
-      background-size: contain; 
-      background-repeat: no-repeat; 
+      background-size: contain;
+      background-repeat: no-repeat;
       z-index: 1;
     }
   }
@@ -115,7 +124,6 @@ import { audienceSlides } from '~/constants';
       height: 630px;
       display: flex;
       gap: 32px;
-
     }
     &__image-big {
       position: relative;
@@ -136,7 +144,7 @@ import { audienceSlides } from '~/constants';
         img {
           height: 100%;
           width: 100%;
-          object-fit: cover; 
+          object-fit: cover;
         }
       }
       .title-h4 {
@@ -160,9 +168,9 @@ import { audienceSlides } from '~/constants';
       max-width: 520px;
     }
   }
- }
+}
 
- @media (max-width: 991px) { 
+@media (max-width: 991px) {
   .audience {
     &__wrapper {
       padding: 2vw 0;
@@ -211,5 +219,5 @@ import { audienceSlides } from '~/constants';
       }
     }
   }
- }
+}
 </style>

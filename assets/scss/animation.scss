@@ -73,17 +73,16 @@
     background: $linear-purple;
   }
   20% {
-    background: lighten(#FF62B7, 5%);
+    background: lighten(#ff62b7, 5%);
   }
   80% {
-    background: lighten(#FF62B7, 5%);
+    background: lighten(#ff62b7, 5%);
   }
   100% {
     background: $linear-purple;
   }
 }
 @keyframes small-rotate {
-  
   0% {
     transform: rotate(10deg);
   }
@@ -117,16 +116,16 @@
   100% {
     transform: rotate(10deg);
   }
- }
- @keyframes spinner-rotate {
+}
+@keyframes spinner-rotate {
   0% {
     transform: rotate(0);
   }
   100% {
     transform: rotate(360deg);
   }
- }
- @keyframes slideInFromLeft{
+}
+@keyframes slideInFromLeft {
   0% {
     transform: translateX(-20px);
     opacity: 0;
@@ -135,8 +134,8 @@
     transform: translateX(0);
     opacity: 1;
   }
- }
- @keyframes slideInFromRight{
+}
+@keyframes slideInFromRight {
   0% {
     transform: translateX(20px);
     opacity: 0;
@@ -145,8 +144,8 @@
     transform: translateX(0);
     opacity: 1;
   }
- }
- @keyframes slideInFromUp{
+}
+@keyframes slideInFromUp {
   0% {
     transform: translateY(10px);
     opacity: 0;
@@ -155,19 +154,21 @@
     transform: translateY(50px);
     opacity: 1;
   }
- }
- @keyframes float-x {
-  0%, 100% {
+}
+@keyframes float-x {
+  0%,
+  100% {
     -webkit-transform: translateX(0);
     transform: translateX(0);
   }
   50% {
-      -webkit-transform: translateX(-7px);
-      transform: translateX(-7px);
+    -webkit-transform: translateX(-7px);
+    transform: translateX(-7px);
   }
 }
 @keyframes float-y {
-  0%, 100% {
+  0%,
+  100% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
@@ -175,11 +176,12 @@
     -webkit-transform: translateY(-7px);
     transform: translateY(-7px);
   }
-
 }
 
 .animate-up {
-  transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+  transition:
+    transform 0.6s ease-out,
+    opacity 0.6s ease-out;
   transform: translateY(20px);
   opacity: 0;
 
@@ -190,7 +192,9 @@
 }
 
 .animate-from-left {
-  transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+  transition:
+    transform 0.6s ease-out,
+    opacity 0.6s ease-out;
   transform: translateX(-20px);
   opacity: 0;
 
@@ -200,7 +204,9 @@
   }
 }
 .animate-from-right {
-  transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+  transition:
+    transform 0.6s ease-out,
+    opacity 0.6s ease-out;
   transform: translateX(20px);
   opacity: 0;
 
@@ -209,4 +215,3 @@
     opacity: 1;
   }
 }
- 

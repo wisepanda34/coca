@@ -1,41 +1,40 @@
 <!-- components/home/Digital.vue -->
 <script setup>
-import { useAnimationObserver } from '~/composables/useAnimate';
-import {addAnimation} from '~/utils/animate.js'
- 
-const digitalRef = useAnimationObserver(addAnimation); 
+import { useAnimationObserver } from '~/composables/useAnimate'
+import { addAnimation } from '~/utils/animate.js'
 
+const digitalRef = useAnimationObserver(addAnimation)
 </script>
- 
+
 <template>
   <section class="digital">
     <div class="container">
       <div class="digital__wrapper">
-
-        <div class="digital__left" >
+        <div class="digital__left">
           <h1 class="title-h1">Digitally forward creative</h1>
-          <p class="slogan">Our biggest challenge is making sure we're always designing and building products that will help you run your business better.</p>
+          <p class="slogan">
+            Our biggest challenge is making sure we're always designing and
+            building products that will help you run your business better.
+          </p>
           <div class="digital__email">
-            <input type="email" placeholder="Enter your email">
-            <UIButton text="Try for free"/>
+            <input type="email" placeholder="Enter your email" />
+            <UIButton text="Try for free" />
           </div>
         </div>
 
         <div ref="digitalRef" class="digital__right animate-from-right">
           <div class="digital__grafic">
-            <div class="digital__growth"/>
+            <div class="digital__growth" />
           </div>
-          <div class="digital__statistic"/>
+          <div class="digital__statistic" />
         </div>
-
       </div>
     </div>
   </section>
 </template>
- 
-<style scoped lang='scss'>
- .digital {
 
+<style scoped lang="scss">
+.digital {
   &__wrapper {
     position: relative;
     min-height: 650px;
@@ -51,8 +50,8 @@ const digitalRef = useAnimationObserver(addAnimation);
       width: 100%;
       height: 100%;
       background-image: url('/images/bg-orange.png');
-      background-size: contain; 
-      background-repeat: no-repeat; 
+      background-size: contain;
+      background-repeat: no-repeat;
       z-index: -1;
     }
   }
@@ -100,8 +99,8 @@ const digitalRef = useAnimationObserver(addAnimation);
       width: 100%;
       height: 100%;
       background-image: url('/public/images/bg-green.png');
-      background-size: contain; 
-      background-repeat: no-repeat; 
+      background-size: contain;
+      background-repeat: no-repeat;
       z-index: 1;
     }
   }
@@ -127,8 +126,8 @@ const digitalRef = useAnimationObserver(addAnimation);
     background-size: contain;
     z-index: 2;
   }
- }
- @media (max-width: 1439px) {
+}
+@media (max-width: 1439px) {
   .digital {
     &__grafic {
       margin: 0 80px 0 auto;
@@ -137,8 +136,8 @@ const digitalRef = useAnimationObserver(addAnimation);
       margin: 30px 80px 0 auto;
     }
   }
- }
- @media (max-width: 1179px) {
+}
+@media (max-width: 1179px) {
   .digital {
     &__wrapper {
       padding: 4vw 0;
@@ -158,8 +157,8 @@ const digitalRef = useAnimationObserver(addAnimation);
       margin: 30px auto 0;
     }
   }
- }
- @media (max-width: 991px) {
+}
+@media (max-width: 991px) {
   .digital {
     &__email {
       input {
@@ -168,8 +167,8 @@ const digitalRef = useAnimationObserver(addAnimation);
       }
     }
   }
- }
- @media (max-width: 650px) {
+}
+@media (max-width: 650px) {
   .digital {
     &__wrapper {
       gap: 50px;
@@ -195,5 +194,5 @@ const digitalRef = useAnimationObserver(addAnimation);
       height: 86px;
     }
   }
- }
+}
 </style>

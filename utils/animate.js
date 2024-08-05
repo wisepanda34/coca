@@ -1,5 +1,5 @@
-// utils/animate.js 
+// utils/animate.js
 
 export const addAnimation = (element) => {
-  element.classList.add('animate');
-};
+  element.classList.add('animate')
+}
