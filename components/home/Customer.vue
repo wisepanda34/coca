@@ -1,7 +1,7 @@
 <!-- Customer.vue -->
 <script setup>
-import { Navigation, EffectFlip, Autoplay } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/vue'
+import { Navigation, EffectFlip, Autoplay } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/autoplay'

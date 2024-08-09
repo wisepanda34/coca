@@ -32,9 +32,9 @@ import { audienceSlides } from '~/constants'
             :centered-slides="false"
             :loop="true"
             :autoplay="{
-              delay: 3000
+              delay: 5000
             }"
-            :speed="1000"
+            :speed="1800"
             :breakpoints="{
               991: {
                 spaceBetween: 32,

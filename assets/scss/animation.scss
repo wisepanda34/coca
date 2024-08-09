@@ -1,3 +1,24 @@
+/* pageTransition: name: 'page-fade' */
+
+.page-fade-enter-active,
+.page-fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.page-fade-enter, .page-fade-leave-to /* .page-fade-leave-active in <2.1.8 */ {
+  opacity: 0;
+}
+
+// layoutTransition: name: 'layout'
+.layout-enter-active,
+.layout-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.layout-enter, .layout-leave-to /* .layout-leave-active in <2.1.8 */ {
+  opacity: 0;
+}
+
 //Transition name="slide-fade"
 .slide-fade-enter-active {
   transition: all 0.2s ease;

@@ -36,7 +36,6 @@ export default withNuxt(
       ],
       '@typescript-eslint/no-unused-vars': 'error',
       'vue/multi-word-component-names': 'off',
-      // Включаем правила конфигурации Prettier для устранения конфликтов
       ...eslintConfigPrettier.rules
     },
     linterOptions: {

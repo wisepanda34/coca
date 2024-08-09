@@ -3,7 +3,7 @@
 import { useAnimationObserver } from '~/composables/useAnimate'
 import { addAnimation } from '~/utils/animate.js'
 
-const digitalRef = useAnimationObserver(addAnimation)
+const digitalRef = useAnimationObserver(addAnimation, 0.1)
 </script>
 
 <template>

@@ -3,9 +3,7 @@
 
 <template>
   <div class="site">
-    <TheHeader />
     <slot />
-    <TheFooter />
   </div>
 </template>
 

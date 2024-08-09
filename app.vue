@@ -1,5 +1,10 @@
+<!-- app.vue  -->
 <template>
   <NuxtLayout>
-    <NuxtPage class="page" />
+    <TheHeader />
+    <div>
+      <NuxtPage class="page" />
+    </div>
+    <TheFooter />
   </NuxtLayout>
 </template>

@@ -264,3 +264,83 @@ export const teamSlides = [
     instagram: 'http://instagram.com'
   }
 ]
+
+export const activitySlides = [
+  {
+    image: '/images/activity-1.png',
+    published: 'Published in Insight Jan 30, 2022',
+    title: 'Practice making User Flow',
+    descr: "In this article, we'll cover how to create user flows",
+    author: 'Judy Laret'
+  },
+  {
+    image: '/images/activity-2.png',
+    published: 'Published in Insight May 15, 2023',
+    title: 'Overview of the Design Principles',
+    descr:
+      'What are Design Principles?… To understand design principles, we first discuss the principles. ',
+    author: 'Ann Rossert'
+  },
+  {
+    image: '/images/activity-3.png',
+    published: 'Published in Insight Aug 09, 2023',
+    title: 'Using Grid in website design',
+    descr: 'Andi: "Whats the grid like?" Toni: “Like below…”',
+    author: 'Michel Gugh'
+  }
+]
+
+export const blogs = [
+  {
+    image: '/images/blackblock-1.png',
+    title: 'How we perform long-running tasks using AWS services',
+    descr:
+      'Webflow is web design tool as well as a hosting platform and CMS all in one. While you are probably familiar with all of these, they are usually entirely separate tools.'
+  },
+  {
+    image: '/images/blackblock-2.png',
+    title: 'How to ask when doing User Research',
+    descr:
+      'Bro, the story is that you want to make an application for buying and selling goods on the market. During user research, what do you think you will ask people?'
+  },
+  {
+    image: '/images/blackblock-3.png',
+    title: 'Exploration — Simple exercise but big effectsks using AWS services',
+    descr:
+      'Make alternatives or other options for the design we are making. For example, we are creating a website design. Then there is the testimonial section.'
+  },
+  {
+    image: '/images/webflow.png',
+    title: 'Webflow Break the Coding Barrier',
+    descr:
+      'Webflow is web design tool as well as a hosting platform and CMS all in one. While you are probably familiar with all of these, they are usually entirely separate tools.'
+  }
+]
+
+export const articles = [
+  {
+    image: '/images/article-1.png',
+    title:
+      'List of UX Designer Portfolio / Case Studies where you can make money',
+    descr:
+      'Here are some portfolios / Case Studies from UX Designers that you can use as a reference for creating a portfolio. Two interesting things from their portfolio are:'
+  },
+  {
+    image: '/images/activity-3.png',
+    title: 'Skyrocketing in The Designing Career, Why Not?',
+    descr:
+      'Ever thought of jumping into the world of design as a career? If not, you may want to look at what the word ‘design’ actually means. Design is a method of designing aesthetic actions that are carried out.'
+  },
+  {
+    image: '/images/article-2.png',
+    title: 'Elements that may be missed when designing the UI',
+    descr:
+      'This is an article that talks about the little elements that are often overlooked when designing UI.'
+  },
+  {
+    image: '/images/mutually.png',
+    title: 'Case Studies where you can make money',
+    descr:
+      'Case Studies from UX Designers that you can use as a reference for creating a portfolio. Two interesting things from their portfolio are:'
+  }
+]

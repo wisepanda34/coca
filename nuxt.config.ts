@@ -1,9 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import eslintPlugin from 'vite-plugin-eslint2'
+
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
-  ssr: true,
+  ssr: false,
   typescript: {
-    typeCheck: true,
+    typeCheck: false,
     strict: true
   },
   app: {
@@ -16,10 +18,11 @@ export default defineNuxtConfig({
       link: [{ rel: 'icon', type: 'image/svg+xml', href: '/favicon.ico' }]
     }
   },
-  devtools: { enabled: false },
+  devtools: { enabled: true },
   modules: ['@nuxt/image', '@nuxtjs/eslint-module', '@nuxt/eslint'],
   css: ['~/assets/scss/main.scss'],
   vite: {
+    plugins: [eslintPlugin()],
     css: {
       preprocessorOptions: {
         scss: {

@@ -1,7 +1,7 @@
 <!-- Trending.vue -->
 <script setup>
-import { Navigation } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/vue'
+import { Navigation } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import { trendigSlides } from '~/constants'

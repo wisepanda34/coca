@@ -1,7 +1,5 @@
 <!-- components/global/IconArrowBlack -->
 <script setup>
-import { defineProps } from 'vue'
-
 const props = defineProps({
   isBlue: {
     type: Boolean,
