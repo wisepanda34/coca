@@ -211,6 +211,20 @@ export const audienceSlides = [
     title: 'How we achieve goals',
     descr:
       'Lot of thought into what it is that makes us who we are. The qualities that unite us, that make us such an effective team, and... Successful digital marketing strategies'
+  },
+  {
+    imageMain: '/images/slide-3.png',
+    imageBig: '/images/work_on_laptop.png',
+    title: 'What we believe in',
+    descr:
+      'Over the years at Sans, we’ve put a lot of thought into what it is that makes us who we are. The qualities that unite us, that make us such an effective team, and...'
+  },
+  {
+    imageMain: '/images/skyrocketing.png',
+    imageBig: '/images/two_women.png',
+    title: 'How we achieve goals',
+    descr:
+      'Lot of thought into what it is that makes us who we are. The qualities that unite us, that make us such an effective team, and... Successful digital marketing strategies'
   }
 ]
 
@@ -287,29 +301,41 @@ export const activitySlides = [
     title: 'Using Grid in website design',
     descr: 'Andi: "Whats the grid like?" Toni: “Like below…”',
     author: 'Michel Gugh'
+  },
+  {
+    image: '/images/activity-2.png',
+    published: 'Published in Insight May 15, 2023',
+    title: 'Overview of the Design Principles',
+    descr:
+      'What are Design Principles?… To understand design principles, we first discuss the principles. ',
+    author: 'Ann Rossert'
   }
 ]
 
 export const blogs = [
   {
+    id: 'aws',
     image: '/images/blackblock-1.png',
     title: 'How we perform long-running tasks using AWS services',
     descr:
       'Webflow is web design tool as well as a hosting platform and CMS all in one. While you are probably familiar with all of these, they are usually entirely separate tools.'
   },
   {
+    id: 'research',
     image: '/images/blackblock-2.png',
     title: 'How to ask when doing User Research',
     descr:
       'Bro, the story is that you want to make an application for buying and selling goods on the market. During user research, what do you think you will ask people?'
   },
   {
+    id: 'exploration',
     image: '/images/blackblock-3.png',
     title: 'Exploration — Simple exercise but big effectsks using AWS services',
     descr:
       'Make alternatives or other options for the design we are making. For example, we are creating a website design. Then there is the testimonial section.'
   },
   {
+    id: 'coding',
     image: '/images/webflow.png',
     title: 'Webflow Break the Coding Barrier',
     descr:
@@ -342,5 +368,75 @@ export const articles = [
     title: 'Case Studies where you can make money',
     descr:
       'Case Studies from UX Designers that you can use as a reference for creating a portfolio. Two interesting things from their portfolio are:'
+  }
+]
+
+export const priceCards = [
+  {
+    package: 'Starter',
+    icon: '/svg/heart.svg',
+    offer: false,
+    bgBlue: false,
+    descr:
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+    price: 120,
+    priceAnnual: 100,
+    include: [0, 1, 2, 3]
+  },
+  {
+    package: 'Popular',
+    icon: '/svg/popular.svg',
+    iconBest: '/svg/best-offer.svg',
+    offer: true,
+    bgBlue: true,
+    descr:
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+    price: 1700,
+    priceAnnual: 1400,
+    include: [0, 1, 2, 3, 5]
+  },
+  {
+    package: 'Enterprise',
+    icon: '/svg/crown.svg',
+    offer: false,
+    bgBlue: false,
+    descr:
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+    price: 2600,
+    priceAnnual: 2100,
+    include: [0, 1, 2, 3, 4, 5, 6, 7]
+  }
+]
+export const includesToPackage = [
+  'Unlimited Upload',
+  'Advanced Statistic',
+  'Profile Badge',
+  'Access to the community',
+  'History of all Liked Photos',
+  'Directory Listing',
+  'Customize Your Profile',
+  'Display Your Workshops'
+]
+
+export const faqArray = [
+  {
+    question: 'Is there a free trial available?',
+    answer:
+      'Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.'
+  },
+  {
+    question: 'Can I Change Plans Or Cancel My Subscription At Any Time',
+    answer:
+      'Yes, you can change your plan or cancel your subscription at any time. We offer flexible subscription options to meet your needs, and there are no long-term commitments. Simply go to your account settings to manage your plan or contact our support team for assistance.'
+  },
+  {
+    question: 'How Secure Is My Date With Sans CRM',
+    answer:
+      'Sans CRM takes data security seriously. We use industry-standard encryption protocols to protect your data in transit and at rest. Our servers are located in secure data centers, and we regularly perform security audits and updates to safeguard your informatio'
+  },
+  {
+    question: 'What Is The Uptime Guarantee',
+    answer:
+      'Our service offers a 99.9% uptime guarantee, ensuring that Sans CRM is available whenever you need it. We utilize reliable cloud infrastructure and have a dedicated team monitoring the system around the clock to minimize any potential downtime.'
   }
 ]

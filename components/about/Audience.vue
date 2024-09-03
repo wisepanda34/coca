@@ -58,7 +58,7 @@ import { audienceSlides } from '~/constants'
                   </div>
                   <h4 class="title-h4">{{ item.title }}</h4>
                   <p class="motto">{{ item.descr }}</p>
-                  <UIButton text="See Details &#8594;" is-white="false" />
+                  <UIButton text="See Details &#8594;" />
                 </div>
               </div>
             </swiper-slide>

@@ -8,6 +8,11 @@ const props = defineProps({
   isWhite: {
     type: Boolean,
     default: true
+  },
+  // eslint-disable-next-line vue/require-default-prop
+  borderColor: {
+    type: String,
+    required: false
   }
   // width: {
   //   type: Number,
@@ -18,10 +23,19 @@ const props = defineProps({
   //   default: 56
   // }
 })
+defineEmits(['clickButton'])
 </script>
 
 <template>
-  <button :class="['button flex-center', { 'button--white': isWhite }]">
+  <button
+    :class="['button flex-center', { 'button--white': isWhite }]"
+    :style="{
+      borderColor: props.borderColor,
+      borderWidth: props.borderColor ? '1px' : '0',
+      borderStyle: props.borderColor ? 'solid' : 'none'
+    }"
+    @click="$emit('clickButton')"
+  >
     {{ props.text }}
   </button>
 </template>

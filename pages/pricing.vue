@@ -1,8 +1,14 @@
 <!-- pages/pricing.vue -->
-<script setup></script>
+<script setup>
+import Pricing from '~/components/pricing/Pricing.vue'
+import Faq from '~/components/pricing/Faq.vue'
+</script>
 
 <template>
-  <section class="" />
+  <div>
+    <Pricing />
+    <Faq />
+  </div>
 </template>
 
 <style scoped lang="scss"></style>

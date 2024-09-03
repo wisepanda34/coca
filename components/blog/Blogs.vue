@@ -21,7 +21,9 @@ import { blogs } from '~/constants'
           <div class="blogs__img">
             <NuxtImg :src="item.image" alt="img" />
           </div>
-          <NuxtLink class="blogs__title" to="/blog">{{ item.title }}</NuxtLink>
+          <NuxtLink class="blogs__title" :to="`/blog/${item.id}`">{{
+            item.title
+          }}</NuxtLink>
           <p class="blogs__descr">{{ item.descr }}</p>
         </div>
       </div>

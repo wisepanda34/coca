@@ -19,7 +19,12 @@ export default defineNuxtConfig({
     }
   },
   devtools: { enabled: true },
-  modules: ['@nuxt/image', '@nuxtjs/eslint-module', '@nuxt/eslint'],
+  modules: [
+    '@pinia/nuxt',
+    '@nuxt/image',
+    '@nuxtjs/eslint-module',
+    '@nuxt/eslint'
+  ],
   css: ['~/assets/scss/main.scss'],
   vite: {
     plugins: [eslintPlugin()],
