@@ -70,11 +70,23 @@ const modules = [Navigation, Autoplay]
     &::before {
       content: '';
       position: absolute;
-      top: -30%;
-      left: -18%;
-      width: 800px;
-      height: 800px;
+      top: -100px;
+      left: -100px;
+      width: 550px;
+      height: 550px;
       background-image: url('/images/bg-orange.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 100px;
+      right: -150px;
+      width: 550px;
+      height: 550px;
+      background-image: url('/images/bg-green.png');
       background-size: cover;
       background-repeat: no-repeat;
       z-index: -1;
@@ -143,6 +155,14 @@ const modules = [Navigation, Autoplay]
 }
 @media (max-width: 767px) {
   .activity {
+    &__wrapper::before {
+      top: calc(5vw - 250px);
+      left: calc(5vw - 200px);
+    }
+    &__wrapper::after {
+      top: 0;
+      right: calc(5vw - 300px);
+    }
     &__swiper {
       .slide {
         &__info {
