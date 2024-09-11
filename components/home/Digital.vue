@@ -42,14 +42,27 @@ const digitalRef = useAnimationObserver(addAnimation, 0.1)
     justify-content: space-between;
     gap: 20px;
     padding: 70px 0 70px;
+
     &::before {
       content: '';
       position: absolute;
-      top: -20%;
-      left: 5%;
-      width: 100%;
-      height: 100%;
+      top: -100px;
+      left: -100px;
+      width: 550px;
+      height: 550px;
       background-image: url('/images/bg-orange.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 200px;
+      right: -250px;
+      width: 550px;
+      height: 550px;
+      background-image: url('/public/images/bg-green.png');
       background-size: contain;
       background-repeat: no-repeat;
       z-index: -1;
@@ -74,7 +87,6 @@ const digitalRef = useAnimationObserver(addAnimation, 0.1)
       border-right: none;
     }
   }
-
   &__right {
     flex: 0 1 50%;
     padding: 25px 50px 0 0;
@@ -89,20 +101,6 @@ const digitalRef = useAnimationObserver(addAnimation, 0.1)
     background-repeat: no-repeat;
     background-size: cover;
     box-shadow: $shadow-1;
-    z-index: 2;
-
-    &::before {
-      content: '';
-      position: absolute;
-      top: 20%;
-      left: 70%;
-      width: 100%;
-      height: 100%;
-      background-image: url('/public/images/bg-green.png');
-      background-size: contain;
-      background-repeat: no-repeat;
-      z-index: 1;
-    }
   }
   &__growth {
     position: absolute;
@@ -114,7 +112,6 @@ const digitalRef = useAnimationObserver(addAnimation, 0.1)
     background-repeat: no-repeat;
     background-size: cover;
     box-shadow: $shadow-1;
-    z-index: 2;
   }
   &__statistic {
     position: relative;
@@ -124,7 +121,6 @@ const digitalRef = useAnimationObserver(addAnimation, 0.1)
     background-image: url('/images/statistic.png');
     background-repeat: no-repeat;
     background-size: contain;
-    z-index: 2;
   }
 }
 @media (max-width: 1439px) {
@@ -143,6 +139,19 @@ const digitalRef = useAnimationObserver(addAnimation, 0.1)
       padding: 4vw 0;
       flex-direction: column;
       gap: 70px;
+
+      &::before {
+        top: -200px;
+        left: -160px;
+        width: 550px;
+        height: 550px;
+      }
+      &::after {
+        top: -80px;
+        right: -200px;
+        width: 550px;
+        height: 550px;
+      }
     }
     &__email {
       justify-content: center;

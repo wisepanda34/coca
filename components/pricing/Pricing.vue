@@ -42,6 +42,34 @@ const handleChoosePlan = (card) => {
 
 <style scoped lang="scss">
 .pricing {
+  &__wrapper {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -200px;
+      left: -100px;
+      width: 550px;
+      height: 550px;
+      background-image: url('/images/bg-orange.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -150px;
+      width: 550px;
+      height: 550px;
+      background-image: url('/images/bg-green.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+  }
   &__up {
     max-width: 903px;
     display: flex;
@@ -99,6 +127,20 @@ const handleChoosePlan = (card) => {
 }
 @media (max-width: 991px) {
   .pricing {
+    &__wrapper {
+      &::before {
+        top: -190px;
+        left: -120px;
+        width: 400px;
+        height: 400px;
+      }
+      &::after {
+        top: 0;
+        right: -150px;
+        width: 400px;
+        height: 400px;
+      }
+    }
     &__cards {
       grid-template-columns: 1fr;
       gap: 32px;

@@ -145,6 +145,9 @@ useClickOutside(dropdownRef, () => {
 @media (max-width: 640px) {
   .list-select {
     .select {
+      &__dropdown {
+        width: 250px;
+      }
       &__dropdown.open {
         grid-template-columns: 1fr;
       }

@@ -20,7 +20,7 @@ const modules = [Navigation, Autoplay]
           Our biggest challenge is making sure we're always designing and
           building products that will help you run your business better.
         </p>
-        <ListSelect />
+        <ListSelect class="activity__select" />
         <div class="activity__swiper">
           <swiper
             :modules="modules"
@@ -94,6 +94,9 @@ const modules = [Navigation, Autoplay]
   }
   &__slogan {
     max-width: 750px;
+  }
+  &__select {
+    z-index: 2;
   }
   &__swiper {
     .slide {
