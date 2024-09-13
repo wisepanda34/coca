@@ -65,7 +65,7 @@ const adresses = [
   {
     id: 'Bolivia',
     name: 'Group TTP, Retorto',
-    adress: 'Dormato, Cruparto, 94'
+    adress: 'Dormato, El Rruparto, 94'
   }
 ]
 const pinVisible = ref(false)
@@ -75,17 +75,22 @@ const countryName = ref('')
 function showPin(event) {
   const country = event.target
   const container = document.querySelector('.map-svg')
+
   const bbox = country.getBoundingClientRect()
   const bcontainer = container.getBoundingClientRect()
+  console.log('bcontainer: ', bcontainer)
+  console.log('bbox: ', bbox)
 
   let pinX = bbox.x - bcontainer.x + bbox.width / 2
-  let pinY = bbox.y - bcontainer.y + bbox.height / 2 - 120
+  let pinY = bbox.y - bcontainer.y + bbox.height / 2
   if (country.id === 'USA') {
     pinX += 25
-    pinY += 30
+    pinY += 20
   }
 
   pinPosition.value = { x: pinX, y: pinY }
+  console.log('pin ', pinPosition.value)
+
   countryName.value = country.id
   pinVisible.value = true
   const pin = document.querySelector('.map-svg__pin')
@@ -1642,20 +1647,14 @@ function hidePin() {
       @mouseover="showPin"
       @mouseleave="hidePin"
     >
-      <div class="map-svg__pin-info">
+      <div class="map-svg__pin_info">
         <span>{{
           adresses.find((item) => item.id === countryName)?.name
         }}</span>
         <p>{{ adresses.find((item) => item.id === countryName)?.adress }}</p>
       </div>
 
-      <svg
-        width="54"
-        height="54"
-        viewBox="0 0 54 54"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+      <svg viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
         <ellipse
           cx="27"
           cy="50.5"
@@ -1685,23 +1684,25 @@ function hidePin() {
   }
   &__pin {
     position: absolute;
-    width: 54px;
-    height: 54px;
+    // width: 54px;
+    // height: 54px;
     pointer-events: none;
     opacity: 0;
-    transform: translate(-49%, -102%);
-    transition:
-      opacity 0.2s ease-in-out,
-      transform 0.3s ease;
+    transform: translate(-25px, -174px);
+    transition: opacity 0.2s ease-in-out;
 
     &.visible {
       opacity: 1;
-      transform: translate(-50%, -100%);
     }
 
-    &-info {
+    svg {
+      width: 54px;
+      height: 54px;
+    }
+
+    &_info {
       width: 180px;
-      min-height: 100px;
+      height: 100px;
       padding: 10px 12px;
       background: $white;
       border-radius: $radius-3;
@@ -1710,13 +1711,37 @@ function hidePin() {
       font-size: 14px;
       line-height: 1.5;
       transform: translateX(-65px);
-
       margin-bottom: 20px;
+
       span {
         display: block;
         font-size: 16px;
         font-weight: bold;
         line-height: 1.625;
+      }
+    }
+  }
+}
+@media (max-width: 991px) {
+  .map-svg {
+    &__pin {
+      transform: translate(-20px, -140px);
+      svg {
+        width: 40px;
+        height: 40px;
+      }
+      &_info {
+        width: 130px;
+        height: 90px;
+        padding: 8px 6px;
+        font-size: 12px;
+        line-height: 1.4;
+        transform: translateX(-50px);
+        margin-bottom: 15px;
+        span {
+          font-size: 14px;
+          line-height: 1.5;
+        }
       }
     }
   }

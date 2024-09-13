@@ -20,7 +20,10 @@ const props = defineProps({
         :class="['switch-round', { 'toggle--false': !useSwitch.isSave }]"
       ></div>
     </div>
-    <div class="toggle-switch__label">{{ props.label }}</div>
+    <label
+      :class="['toggle-switch__label', { 'toggle--false': !useSwitch.isSave }]"
+      >{{ props.label }}</label
+    >
   </div>
 </template>
 
@@ -29,11 +32,17 @@ const props = defineProps({
   display: flex;
   justify-content: center;
   gap: 15px;
+  cursor: pointer;
 
   &__label {
     font-size: 16px;
     line-height: 24px;
-    color: $grey-text-2;
+    color: $grey-dark;
+    transition: color 0.3s ease;
+
+    &.toggle--false {
+      color: $grey-text-2;
+    }
   }
 }
 .switch {

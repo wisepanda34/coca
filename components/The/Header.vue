@@ -66,7 +66,10 @@ const closeMenu = () => {
             >
               <div class="flex-center gap-5">
                 <div>Contact Us</div>
-                <IconArrowBlack :is-blue="isContactRoute" />
+                <IconArrowBlack
+                  class="contact__arrow"
+                  :is-blue="isContactRoute"
+                />
               </div>
               <div v-if="!isContactRoute" class="contact__line-black" />
               <div v-else class="contact__line-blue" />
@@ -118,9 +121,29 @@ const closeMenu = () => {
         background: $blue-primary;
       }
     }
-
+    &-item {
+      transition: all 0.2s ease;
+    }
+    &-item:hover {
+      color: $grey-text-2;
+    }
+    &-item.contact:hover {
+      color: inherit;
+      .contact__line-black {
+        transform: translateX(-5px);
+      }
+      .contact__arrow {
+        transform: translateX(5px);
+      }
+    }
     &-item.active {
       color: $blue-primary;
+    }
+    &-item.active.contact:hover {
+      color: $blue-primary;
+      .contact__arrow {
+        transform: rotate(180deg);
+      }
     }
   }
   &__burger {
@@ -165,6 +188,10 @@ const closeMenu = () => {
       font-size: 24px;
       letter-spacing: 2px;
       color: $white;
+
+      &-item.contact:hover {
+        color: $grey-text-2;
+      }
     }
     &__burger {
       display: block;

@@ -27,7 +27,9 @@ const toggleFaq = (index) => {
               {{ item.question }}
             </div>
             <div class="faq__item_switch">
-              <span v-if="!isOpenFaq[index]">+</span><span v-else>-</span>
+              <!-- <span v-if="!isOpenFaq[index]">+</span><span v-else>-</span> -->
+              <span :class="{ rotate: isOpenFaq[index] }"></span>
+              <span :class="{ rotate: isOpenFaq[index] }"></span>
             </div>
             <div class="faq__item_answer" :class="{ open: isOpenFaq[index] }">
               {{ item.answer }}
@@ -57,6 +59,7 @@ const toggleFaq = (index) => {
     position: relative;
     display: grid;
     grid-template-columns: auto 20px;
+    grid-column-gap: 20px;
     grid-template-rows: auto;
     margin-bottom: 20px;
 
@@ -74,14 +77,39 @@ const toggleFaq = (index) => {
       max-height: 0;
       overflow: hidden;
       font-weight: 500;
-      transition: all 0.6s ease-out;
+      transition: all 0.5s ease;
     }
     &_answer.open {
       max-height: 400px;
       overflow: visible;
     }
-    &_switch span {
-      padding-left: 10px;
+    &_switch {
+      position: relative;
+      top: 15px;
+      left: 3px;
+
+      span {
+        position: absolute;
+        width: 15px;
+        height: 2px;
+
+        background: $black;
+        transition: transform 0.3s ease;
+
+        &:first-child {
+          transform: rotate(0deg);
+          &.rotate {
+            transform: rotate(180deg);
+          }
+        }
+
+        &:nth-child(2) {
+          transform: rotate(90deg);
+          &.rotate {
+            transform: rotate(180deg);
+          }
+        }
+      }
     }
   }
 }

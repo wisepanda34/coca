@@ -85,12 +85,17 @@ import { articles } from '~/constants'
       right: 70px;
       width: 50px;
       height: 50px;
+      border: 1px solid transparent;
       border-radius: 50%;
 
       background-image: url(/svg/arrow-prev.svg);
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
+      transition: border 0.3s ease;
+      &:hover {
+        border: 0.1px solid $grey-text;
+      }
       @media (max-width: 640px) {
         width: 28px;
         height: 28px;
@@ -110,6 +115,10 @@ import { articles } from '~/constants'
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
+      transition: opacity 0.3s ease;
+      &:hover {
+        opacity: 0.85;
+      }
       @media (max-width: 640px) {
         width: 28px;
         height: 28px;
@@ -130,7 +139,7 @@ import { articles } from '~/constants'
       }
       .button-read {
         box-shadow: $shadow-2;
-        margin: 16px 0 10px 8px;
+        margin: 16px 0 20px 8px;
       }
     }
   }

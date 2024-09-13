@@ -141,6 +141,10 @@ import { teamSlides } from '~/constants'
     .link {
       grid-column: 2;
       grid-row: 2;
+      transition: color 0.2s ease;
+      &:hover {
+        color: $blue-primary;
+      }
     }
   }
 }
