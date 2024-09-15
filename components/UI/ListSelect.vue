@@ -1,6 +1,9 @@
 <!-- ListSelect.vue -->
 <script setup>
 import { useClickOutside } from '~/composables/useClickOutside'
+import { useListselectStore } from '~/stores/listselect.store.js'
+
+const listSelectStore = useListselectStore()
 const activities = [
   'View all',
   'Design',
@@ -9,17 +12,18 @@ const activities = [
   'Software Development',
   'Customer Success'
 ]
-
-const changedItem = ref(0)
-const setActive = (index) => (changedItem.value = index)
 const dropdownRef = ref(null)
-
 const isOpen = ref(false)
-const openDropdown = () => {
-  isOpen.value = true
-}
+
+// const changedItem = ref(0)
+// const setActive = (index) => (changedItem.value = index)
+
+// const openDropdown = () => {
+//   isOpen.value = true
+// }
 const chooseItem = (index) => {
-  changedItem.value = index
+  console.log('index ', index)
+  listSelectStore.chooseOption(activities[index])
   isOpen.value = false
 }
 useClickOutside(dropdownRef, () => {
@@ -33,21 +37,24 @@ useClickOutside(dropdownRef, () => {
       <li
         v-for="(item, index) in activities"
         :key="index"
-        :class="['list__item', { active: changedItem === index }]"
-        @click="setActive(index)"
+        :class="[
+          'list__item',
+          { active: listSelectStore.optionSelected === item }
+        ]"
+        @click="chooseItem(index)"
       >
         {{ item }}
       </li>
     </ul>
 
     <div ref="dropdownRef" class="select">
-      <div class="select__changed" @click="openDropdown">
-        {{ activities[changedItem] }}
+      <div class="select__changed" @click="isOpen = true">
+        {{ listSelectStore.optionSelected }}
       </div>
       <div
         class="select__dropdown"
         :class="{ open: isOpen }"
-        @change="setActive($event.target.value)"
+        @change="chooseItem($event.target.value)"
       >
         <div
           v-for="(item, index) in activities"

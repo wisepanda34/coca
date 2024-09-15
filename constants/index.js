@@ -285,7 +285,8 @@ export const activitySlides = [
     published: 'Published in Insight Jan 30, 2022',
     title: 'Practice making User Flow',
     descr: "In this article, we'll cover how to create user flows",
-    author: 'Judy Laret'
+    author: 'Judy Laret',
+    category: 'Articles'
   },
   {
     image: '/images/activity-2.png',
@@ -293,14 +294,16 @@ export const activitySlides = [
     title: 'Overview of the Design Principles',
     descr:
       'What are Design Principles?… To understand design principles, we first discuss the principles. ',
-    author: 'Ann Rossert'
+    author: 'Ann Rossert',
+    category: 'Design'
   },
   {
     image: '/images/activity-3.png',
     published: 'Published in Insight Aug 09, 2023',
     title: 'Using Grid in website design',
     descr: 'Andi: "Whats the grid like?" Toni: “Like below…”',
-    author: 'Michel Gugh'
+    author: 'Michel Gugh',
+    category: 'Software Development'
   },
   {
     image: '/images/activity-2.png',
@@ -308,7 +311,8 @@ export const activitySlides = [
     title: 'Overview of the Design Principles',
     descr:
       'What are Design Principles?… To understand design principles, we first discuss the principles. ',
-    author: 'Ann Rossert'
+    author: 'Ann Rossert',
+    category: 'Design'
   }
 ]
 

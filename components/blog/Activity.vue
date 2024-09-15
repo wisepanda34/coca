@@ -7,8 +7,19 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/autoplay'
 import { activitySlides } from '~/constants'
+import { useListselectStore } from '~/stores/listselect.store.js'
 
+const listSelectStore = useListselectStore()
 const modules = [Navigation, Autoplay]
+
+const filteredSlides = computed(() => {
+  if (listSelectStore.optionSelected === 'View all') {
+    return activitySlides
+  }
+  return activitySlides.filter(
+    (slide) => slide.category === listSelectStore.optionSelected
+  )
+})
 </script>
 
 <template>
@@ -40,7 +51,7 @@ const modules = [Navigation, Autoplay]
             }"
           >
             <swiper-slide
-              v-for="(item, index) in activitySlides"
+              v-for="(item, index) in filteredSlides"
               :key="index"
               class="slide"
             >

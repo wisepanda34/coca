@@ -78,8 +78,6 @@ function showPin(event) {
 
   const bbox = country.getBoundingClientRect()
   const bcontainer = container.getBoundingClientRect()
-  console.log('bcontainer: ', bcontainer)
-  console.log('bbox: ', bbox)
 
   let pinX = bbox.x - bcontainer.x + bbox.width / 2
   let pinY = bbox.y - bcontainer.y + bbox.height / 2
@@ -89,8 +87,6 @@ function showPin(event) {
   }
 
   pinPosition.value = { x: pinX, y: pinY }
-  console.log('pin ', pinPosition.value)
-
   countryName.value = country.id
   pinVisible.value = true
   const pin = document.querySelector('.map-svg__pin')
@@ -1684,8 +1680,6 @@ function hidePin() {
   }
   &__pin {
     position: absolute;
-    // width: 54px;
-    // height: 54px;
     pointer-events: none;
     opacity: 0;
     transform: translate(-25px, -174px);
