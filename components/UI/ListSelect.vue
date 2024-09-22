@@ -15,12 +15,6 @@ const activities = [
 const dropdownRef = ref(null)
 const isOpen = ref(false)
 
-// const changedItem = ref(0)
-// const setActive = (index) => (changedItem.value = index)
-
-// const openDropdown = () => {
-//   isOpen.value = true
-// }
 const chooseItem = (index) => {
   console.log('index ', index)
   listSelectStore.chooseOption(activities[index])
@@ -81,11 +75,18 @@ useClickOutside(dropdownRef, () => {
 
     &__item {
       cursor: pointer;
+      transition: hover 0.2s ease;
+      &:hover {
+        color: $grey-text-2;
+      }
     }
     &__item.active {
       font-weight: 700;
       text-decoration: underline;
       letter-spacing: -0.45px;
+      &:hover {
+        color: inherit;
+      }
     }
   }
   .select {

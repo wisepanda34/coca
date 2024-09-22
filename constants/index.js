@@ -390,7 +390,7 @@ export const priceCards = [
   {
     package: 'Popular',
     icon: '/svg/popular.svg',
-    iconBest: '/svg/best-offer.svg',
+    iconBest: '/images/best-offers.png',
     offer: true,
     bgBlue: true,
     descr:
