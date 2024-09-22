@@ -18,9 +18,9 @@ import { blogs } from '~/constants'
             fourth: index === 3
           }"
         >
-          <div class="blogs__img">
+          <NuxtLink :to="`/blog/${item.id}`" class="blogs__img">
             <NuxtImg :src="item.image" alt="img" />
-          </div>
+          </NuxtLink>
           <NuxtLink class="blogs__title" :to="`/blog/${item.id}`">{{
             item.title
           }}</NuxtLink>

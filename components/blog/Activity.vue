@@ -61,7 +61,9 @@ const filteredSlides = computed(() => {
                   <p>{{ item.published }}</p>
                   <p>by: {{ item.author }}</p>
                 </div>
-                <h4 class="slide__title">{{ item.title }}</h4>
+                <NuxtLink :to="`/blog/${item.id}`" class="slide__title">
+                  {{ item.title }}
+                </NuxtLink>
                 <p class="slide__descr">{{ item.descr }}</p>
               </div>
             </swiper-slide>
@@ -146,6 +148,12 @@ const filteredSlides = computed(() => {
         font-weight: 700;
         margin-top: 24px;
         margin-bottom: 16px;
+        cursor: pointer;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: $grey-text-2;
+        }
       }
       &__descr {
         max-width: 90%;
