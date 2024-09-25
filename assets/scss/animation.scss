@@ -1,11 +1,10 @@
-/* pageTransition: name: 'page-fade' */
-
+// Transition: name: 'page-fade'
 .page-fade-enter-active,
 .page-fade-leave-active {
   transition: opacity 0.5s ease;
 }
-
-.page-fade-enter, .page-fade-leave-to /* .page-fade-leave-active in <2.1.8 */ {
+.page-fade-enter,
+.page-fade-leave-to {
   opacity: 0;
 }
 
@@ -14,20 +13,28 @@
 .layout-leave-active {
   transition: opacity 0.5s ease;
 }
-
-.layout-enter, .layout-leave-to /* .layout-leave-active in <2.1.8 */ {
+.layout-enter,
+.layout-leave-to {
   opacity: 0;
+}
+
+//Transition name="swiper-fade"
+.swiper-fade-enter-active,
+.swiper-fade-leave-active {
+  transition: opacity 0.5s;
+}
+.swiper-fade-enter,
+.swiper-fade-leave-to {
+  opacity: 0.3;
 }
 
 //Transition name="slide-fade"
 .slide-fade-enter-active {
   transition: all 0.2s ease;
 }
-
 .slide-fade-leave-active {
   transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
 }
-
 .slide-fade-enter-from,
 .slide-fade-leave-to {
   transform: translateX(20px);
@@ -54,18 +61,10 @@
 }
 
 //<Transition name="nested">
-//<div v-if="show" class="outer">
-//<div class="inner">
-//                  Hello
-//</div>
-//</div>
-//</Transition>
-/* rules that target nested elements */
 .nested-enter-active .inner,
 .nested-leave-active .inner {
   transition: all 0.3s ease-in-out;
 }
-
 .nested-enter-from .inner,
 .nested-leave-to .inner {
   transform: translateX(30px);
@@ -196,6 +195,24 @@
   50% {
     -webkit-transform: translateY(-7px);
     transform: translateY(-7px);
+  }
+}
+@keyframes rotate-reverse {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  25% {
+    -webkit-transform: rotate(5deg);
+    transform: rotate(5deg);
+  }
+  75% {
+    -webkit-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
   }
 }
 

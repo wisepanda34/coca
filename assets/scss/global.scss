@@ -3,7 +3,6 @@ html {
   font-size: 18px;
   line-height: 32px;
   user-select: none;
-  user-select: none;
 }
 
 body {
@@ -96,14 +95,8 @@ svg {
 .float-y {
   animation: float-y 6s infinite ease-in-out;
 }
-
-.subtitle {
-  font-family: 'Inter-SemiBold', sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 42px;
-  letter-spacing: -1px;
+.rotate-reverse {
+  animation: rotate-reverse 10s infinite;
 }
 .rotate-180 {
   transform: rotate(180deg);
@@ -125,8 +118,8 @@ svg {
 .pointer {
   cursor: pointer;
 }
-.rotate-180 {
-  transform: rotate(180deg);
+.user-text {
+  user-select: text;
 }
 .flex {
   display: flex;
@@ -153,6 +146,14 @@ svg {
 }
 .none {
   display: none !important;
+}
+.subtitle {
+  font-family: 'Inter-SemiBold', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 42px;
+  letter-spacing: -1px;
 }
 .title-h1 {
   font-size: 72px;

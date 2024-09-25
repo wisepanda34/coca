@@ -22,7 +22,9 @@ import { audienceSlides } from '~/constants'
             work with you to build your website and create online businesses
             that grow.
           </p>
-          <div class="audience__stamp" />
+          <div class="float-x rotate-reverse">
+            <div class="audience__stamp float-y" />
+          </div>
         </div>
         <div class="audience__swiper">
           <swiper

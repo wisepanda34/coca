@@ -11,7 +11,7 @@ const message = ref('')
   <section class="brand">
     <div class="container">
       <div class="brand__wrapper">
-        <form class="brand__form form">
+        <form class="brand__form form" @submit.prevent="handleSubmit">
           <h3 class="form__title">Let’s level up your brand</h3>
           <p class="form__descr">
             You can reach us anytime <span>hellosansbrothers@gmail.com</span>
@@ -97,6 +97,7 @@ const message = ref('')
       font-weight: 1.33;
       span {
         color: $blue-primary;
+        user-select: text;
       }
     }
     &__inputs {

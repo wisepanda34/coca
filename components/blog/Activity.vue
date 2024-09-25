@@ -32,31 +32,37 @@ const filteredSlides = computed(() => {
           building products that will help you run your business better.
         </p>
         <ListSelect class="activity__select" />
-        <div class="activity__swiper">
-          <swiper
-            :modules="modules"
-            :slides-per-view="1.2"
-            :space-between="24"
-            :loop="true"
-            :speed="1800"
-            :breakpoints="{
-              991: {
-                spaceBetween: 32,
-                slidesPerView: 2.5
-              },
-              640: {
-                spaceBetween: 24,
-                slidesPerView: 2
-              }
-            }"
+        <transition name="swiper-fade" mode="out-in">
+          <div
+            v-if="filteredSlides.length"
+            :key="listSelectStore.optionSelected"
+            class="activity__swiper"
           >
-            <swiper-slide
-              v-for="(item, index) in filteredSlides"
-              :key="index"
-              class="slide"
+            <swiper
+              :modules="modules"
+              :slides-per-view="1.2"
+              :space-between="24"
+              :loop="true"
+              :speed="1800"
+              :breakpoints="{
+                991: {
+                  spaceBetween: 32,
+                  slidesPerView: 2.5
+                },
+                640: {
+                  spaceBetween: 24,
+                  slidesPerView: 2
+                }
+              }"
             >
-              <div class="slide__image">
-                <NuxtImg :src="item.image" alt="img" />
+              <swiper-slide
+                v-for="(item, index) in filteredSlides"
+                :key="index"
+                class="slide"
+              >
+                <div class="slide__image">
+                  <NuxtImg :src="item.image" alt="img" />
+                </div>
                 <div class="slide__info">
                   <p>{{ item.published }}</p>
                   <p>by: {{ item.author }}</p>
@@ -65,10 +71,10 @@ const filteredSlides = computed(() => {
                   {{ item.title }}
                 </NuxtLink>
                 <p class="slide__descr">{{ item.descr }}</p>
-              </div>
-            </swiper-slide>
-          </swiper>
-        </div>
+              </swiper-slide>
+            </swiper>
+          </div>
+        </transition>
       </div>
     </div>
   </section>
@@ -112,11 +118,10 @@ const filteredSlides = computed(() => {
     z-index: 2;
   }
   &__swiper {
+    padding-bottom: 100px;
     .slide {
-      padding-bottom: 30%;
       display: flex;
       flex-direction: column;
-      align-items: center;
 
       &__image {
         width: 100%;
@@ -135,6 +140,7 @@ const filteredSlides = computed(() => {
         }
       }
       &__info {
+        width: 100%;
         display: flex;
         justify-content: space-between;
         column-gap: 40px;
@@ -146,6 +152,7 @@ const filteredSlides = computed(() => {
         max-width: 90%;
         font-size: 32px;
         font-weight: 700;
+        line-height: 1.25;
         margin-top: 24px;
         margin-bottom: 16px;
         cursor: pointer;
@@ -171,8 +178,8 @@ const filteredSlides = computed(() => {
   }
 }
 @media (max-width: 991px) {
-  .activity__swiper .slide {
-    padding-bottom: 40%;
+  .activity__swiper {
+    padding-bottom: calc(10vw + 20px);
   }
 }
 @media (max-width: 767px) {
@@ -192,6 +199,7 @@ const filteredSlides = computed(() => {
         }
         &__title {
           font-size: 24px;
+          margin-top: 5vw;
         }
         &__descr {
           font-size: 14px;
@@ -202,12 +210,10 @@ const filteredSlides = computed(() => {
 }
 @media (max-width: 480px) {
   .activity__swiper .slide {
-    padding-bottom: 60%;
   }
 }
 @media (max-width: 375px) {
   .activity__swiper .slide {
-    padding-bottom: 100%;
   }
 }
 </style>

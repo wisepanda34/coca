@@ -44,7 +44,7 @@ import { articles } from '~/constants'
               <div class="slide__image">
                 <NuxtImg :src="item.image" alt="img" />
                 <h4 class="slide__title">{{ item.title }}</h4>
-                <p class="slide__descr motto">{{ item.descr }}</p>
+                <p class="motto">{{ item.descr }}</p>
                 <UIButton
                   text="Read more"
                   :is-white="false"
@@ -135,8 +135,6 @@ import { articles } from '~/constants'
         line-height: 1.31;
         margin: 24px 0 16px;
       }
-      &__descr {
-      }
       .button-read {
         box-shadow: $shadow-2;
         margin: 16px 0 20px 8px;
@@ -146,9 +144,8 @@ import { articles } from '~/constants'
 }
 @media (max-width: 991px) {
   .article {
-    &__wrapper {
-    }
     &__swiper {
+      padding-bottom: 5vw;
       .slide {
         padding-top: 200px;
       }
