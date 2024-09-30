@@ -1,5 +1,7 @@
 <!-- components/home/Digital.vue -->
 <script setup>
+import Orange from '~/components/global/Orange.vue'
+import Green from '~/components/global/Green.vue'
 import { useAnimationObserver } from '~/composables/useAnimate'
 import { addAnimation } from '~/utils/animate.js'
 
@@ -10,6 +12,8 @@ const digitalRef = useAnimationObserver(addAnimation, 0.1)
   <section class="digital">
     <div class="container">
       <div class="digital__wrapper">
+        <Orange class="digital__wrapper_orange" />
+        <Green class="digital__wrapper_green" />
         <div class="digital__left">
           <h1 class="title-h1">Digitally forward creative</h1>
           <p class="slogan">
@@ -24,9 +28,14 @@ const digitalRef = useAnimationObserver(addAnimation, 0.1)
 
         <div ref="digitalRef" class="digital__right animate-from-right">
           <div class="digital__grafic">
-            <div class="digital__growth" />
+            <NuxtImg src="/images/sales.png" alt="sales.png" />
+            <div class="digital__growth">
+              <NuxtImg src="/images/growth.png" alt="growth.png" />
+            </div>
           </div>
-          <div class="digital__statistic" />
+          <div class="digital__statistic">
+            <NuxtImg src="/images/statistic.png" alt="statistic.png" />
+          </div>
         </div>
       </div>
     </div>
@@ -43,29 +52,13 @@ const digitalRef = useAnimationObserver(addAnimation, 0.1)
     gap: 20px;
     padding: 70px 0 70px;
 
-    &::before {
-      content: '';
-      position: absolute;
+    &_orange {
       top: -100px;
       left: -100px;
-      width: 550px;
-      height: 550px;
-      background-image: url('/images/bg-orange.png');
-      background-size: contain;
-      background-repeat: no-repeat;
-      z-index: -1;
     }
-    &::after {
-      content: '';
-      position: absolute;
+    &_green {
       top: 200px;
       right: -250px;
-      width: 550px;
-      height: 550px;
-      background-image: url('/public/images/bg-green.png');
-      background-size: contain;
-      background-repeat: no-repeat;
-      z-index: -1;
     }
   }
   &__left {
@@ -97,9 +90,6 @@ const digitalRef = useAnimationObserver(addAnimation, 0.1)
     width: 420px;
     height: 346px;
     margin: 0 0 0 auto;
-    background-image: url('/images/sales.png');
-    background-repeat: no-repeat;
-    background-size: cover;
     box-shadow: $shadow-1;
   }
   &__growth {
@@ -108,9 +98,6 @@ const digitalRef = useAnimationObserver(addAnimation, 0.1)
     right: -130px;
     width: 213px;
     height: 220px;
-    background-image: url('/images/growth.png');
-    background-repeat: no-repeat;
-    background-size: cover;
     box-shadow: $shadow-1;
   }
   &__statistic {
@@ -118,9 +105,6 @@ const digitalRef = useAnimationObserver(addAnimation, 0.1)
     width: 420px;
     height: 120px;
     margin: 30px 0 0 auto;
-    background-image: url('/images/statistic.png');
-    background-repeat: no-repeat;
-    background-size: contain;
   }
 }
 @media (max-width: 1439px) {
@@ -140,17 +124,13 @@ const digitalRef = useAnimationObserver(addAnimation, 0.1)
       flex-direction: column;
       gap: 70px;
 
-      &::before {
+      &_orange {
         top: -200px;
         left: -160px;
-        width: 550px;
-        height: 550px;
       }
-      &::after {
+      &_green {
         top: -80px;
         right: -200px;
-        width: 550px;
-        height: 550px;
       }
     }
     &__email {
@@ -188,19 +168,22 @@ const digitalRef = useAnimationObserver(addAnimation, 0.1)
         font-size: 14px;
       }
     }
+    &__right {
+      padding: 2vw 7vw 0 0;
+    }
     &__grafic {
-      width: 300px;
-      height: 247px;
+      width: 95%;
+      height: auto;
     }
     &__growth {
-      width: 130px;
-      height: 133px;
+      width: 40%;
+      height: auto;
       top: -20px;
-      right: -60px;
+      right: -12vw;
     }
     &__statistic {
-      width: 300px;
-      height: 86px;
+      width: 95%;
+      height: auto;
     }
   }
 }

@@ -1,5 +1,7 @@
 <!-- components/Footer.vue -->
 <script setup>
+import Orange from '~/components/global/Orange.vue'
+import Green from '~/components/global/Green.vue'
 import { footerLinks, sociaties, info } from '~/constants/index.js'
 import { useRoute } from 'vue-router'
 import { computed } from 'vue'
@@ -33,6 +35,8 @@ const isMobile = computed(() =>
   <footer :class="['footer', { 'footer--white': isWhiteRoute }]">
     <div class="container">
       <div class="footer__wrapper">
+        <Orange class="footer__wrapper_orange" />
+        <Green class="footer__wrapper_green" />
         <div class="footer__top">
           <div>
             <h2 class="footer__top-title">Think beyond the wave</h2>
@@ -137,26 +141,23 @@ const isMobile = computed(() =>
     background: $white;
     color: $black;
     overflow: hidden;
-    &::before {
-      content: '';
-      position: absolute;
-      top: -20%;
-      left: 10%;
-      width: 100%;
-      height: 100%;
-      background-image: url('/public/images/bg-orange.png');
-      background-size: contain;
-      background-repeat: no-repeat;
-      z-index: 1;
-    }
   }
-
   &__wrapper {
     position: relative;
     padding: 40px 0 20px;
     z-index: 2;
-  }
 
+    &_orange {
+      top: -20%;
+      left: -20%;
+      width: 100%;
+      height: 100%;
+    }
+    &_green {
+      bottom: 25%;
+      right: -30%;
+    }
+  }
   &__top {
     display: flex;
     justify-content: space-between;
@@ -167,7 +168,6 @@ const isMobile = computed(() =>
       font-size: 64px;
       line-height: 120%;
     }
-
     &-descr {
       max-width: 537px;
       margin: 24px 0;
@@ -175,7 +175,6 @@ const isMobile = computed(() =>
       font-weight: 500;
     }
   }
-
   &__middle {
     padding: 90px 0 56px;
 
@@ -269,6 +268,16 @@ const isMobile = computed(() =>
   .footer {
     &__wrapper {
       padding: 20px 17px;
+      &_orange {
+        top: -20%;
+        left: -30%;
+        width: 100vw;
+        height: 550px;
+      }
+      &_green {
+        bottom: 10%;
+        right: -30%;
+      }
     }
 
     &__top {
@@ -325,6 +334,17 @@ const isMobile = computed(() =>
 
 @media (max-width: 600px) {
   .footer {
+    &__wrapper_green {
+      bottom: 20%;
+      right: -50%;
+    }
+    &__wrapper_orange {
+      top: -20%;
+      left: auto;
+      right: 0;
+      width: 550px;
+      height: 550px;
+    }
     &__top {
       &-btn {
         align-self: start;

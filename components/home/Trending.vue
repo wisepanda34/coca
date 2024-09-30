@@ -99,8 +99,6 @@ const shouldShowRound = (index) => {
       background: black;
     }
   }
-  &__slide {
-  }
   &__info {
     display: flex;
     justify-content: space-between;

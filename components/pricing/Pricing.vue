@@ -1,5 +1,7 @@
 <!-- Pricing.vue -->
 <script setup>
+import Orange from '~/components/global/Orange.vue'
+import Green from '~/components/global/Green.vue'
 import { priceCards, includesToPackage } from '~/constants'
 import ThePricingCard from '~/components/The/PricingCard.vue'
 
@@ -12,6 +14,8 @@ const handleChoosePlan = (card) => {
   <section class="pricing">
     <div class="container">
       <div class="pricing__wrapper">
+        <Orange class="pricing__wrapper_orange" />
+        <Green class="pricing__wrapper_green" />
         <div class="pricing__up">
           <div class="pricing__plans">
             Pricing plans
@@ -45,29 +49,13 @@ const handleChoosePlan = (card) => {
   &__wrapper {
     position: relative;
 
-    &::before {
-      content: '';
-      position: absolute;
+    &_orange {
       top: -200px;
       left: -100px;
-      width: 550px;
-      height: 550px;
-      background-image: url('/images/bg-orange.png');
-      background-size: cover;
-      background-repeat: no-repeat;
-      z-index: -1;
     }
-    &::after {
-      content: '';
-      position: absolute;
+    &_green {
       top: 0;
       right: -150px;
-      width: 550px;
-      height: 550px;
-      background-image: url('/images/bg-green.png');
-      background-size: cover;
-      background-repeat: no-repeat;
-      z-index: -1;
     }
   }
   &__up {
@@ -128,13 +116,13 @@ const handleChoosePlan = (card) => {
 @media (max-width: 991px) {
   .pricing {
     &__wrapper {
-      &::before {
+      &_orange {
         top: -190px;
         left: -120px;
         width: 400px;
         height: 400px;
       }
-      &::after {
+      &_green {
         top: 0;
         right: -150px;
         width: 400px;
@@ -145,6 +133,7 @@ const handleChoosePlan = (card) => {
       grid-template-columns: 1fr;
       gap: 32px;
       justify-items: center;
+      padding: 7vw 0;
     }
     &__cards .upper {
       transform: translateY(0);

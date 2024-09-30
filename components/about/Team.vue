@@ -1,5 +1,6 @@
 <!-- Team.vue -->
 <script setup>
+import Green from '~/components/global/Green.vue'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Autoplay } from 'swiper/modules'
 import 'swiper/css'
@@ -11,6 +12,7 @@ import { teamSlides } from '~/constants'
   <section class="team">
     <div class="container">
       <div class="team__wrapper">
+        <Green class="team__wrapper_green" />
         <h3 class="title-h3">
           Meet our team of creators, designers, and world-class problem solvers
         </h3>
@@ -90,17 +92,9 @@ import { teamSlides } from '~/constants'
     position: relative;
     padding: 90px 0;
 
-    &::before {
-      content: '';
-      position: absolute;
+    &_green {
       top: -10vw;
       right: -15vw;
-      width: 40vw;
-      height: 40vw;
-      background-image: url('/images/bg-green.png');
-      background-size: contain;
-      background-repeat: no-repeat;
-      z-index: -1;
     }
 
     .title-h3,
@@ -114,8 +108,6 @@ import { teamSlides } from '~/constants'
   .slide {
     &__item {
       max-width: 380px;
-    }
-    &__image {
     }
     &__info {
       display: grid;
@@ -156,7 +148,6 @@ import { teamSlides } from '~/constants'
     }
     &__bottom {
       grid-template-columns: 1fr;
-
       .title-h3 {
         column-span: auto;
       }
@@ -165,6 +156,13 @@ import { teamSlides } from '~/constants'
         grid-row: auto;
       }
     }
+  }
+}
+@media (max-width: 600px) {
+  .team__wrapper_green {
+    top: -10vw;
+    left: 0;
+    right: auto;
   }
 }
 </style>

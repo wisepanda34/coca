@@ -1,5 +1,6 @@
 <!-- Audience.vue -->
 <script setup>
+import Orange from '~/components/global/Orange.vue'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Autoplay } from 'swiper/modules'
 import 'swiper/css'
@@ -11,7 +12,6 @@ import { audienceSlides } from '~/constants'
   <section class="audience">
     <div class="container">
       <div class="audience__wrapper">
-        <div class="audience__bg" />
         <h1 class="audience__title title-h1">
           Everything you need to get the attention of your audience
         </h1>
@@ -22,11 +22,16 @@ import { audienceSlides } from '~/constants'
             work with you to build your website and create online businesses
             that grow.
           </p>
-          <div class="float-x rotate-reverse">
-            <div class="audience__stamp float-y" />
+          <div class="audience__stamp">
+            <div class="float-x rotate-reverse">
+              <div class="float-y">
+                <NuxtImg src="/svg/stamp.svg" alt="stamp.svg" />
+              </div>
+            </div>
           </div>
         </div>
         <div class="audience__swiper">
+          <Orange class="audience__swiper_orange" />
           <swiper
             :modules="[Autoplay]"
             :slides-per-view="1"
@@ -97,27 +102,21 @@ import { audienceSlides } from '~/constants'
     max-width: 800px;
   }
   &__stamp {
-    min-width: 127px;
     width: 127px;
     height: 127px;
     align-self: center;
-    background-image: url('/svg/stamp.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
+
+    img {
+      width: 127px;
+    }
   }
   &__swiper {
     position: relative;
 
-    &::before {
-      content: '';
-      position: absolute;
+    &_orange {
+      top: auto;
       bottom: -25vw;
       left: -5vw;
-      width: 40vw;
-      height: 40vw;
-      background-image: url('/images/bg-orange.png');
-      background-size: contain;
-      background-repeat: no-repeat;
       z-index: 1;
     }
   }
@@ -132,7 +131,6 @@ import { audienceSlides } from '~/constants'
       width: 50%;
     }
     &__round {
-      position: absolute;
       top: 20%;
       right: -56px;
     }
@@ -179,23 +177,16 @@ import { audienceSlides } from '~/constants'
     }
     &__content {
       flex-direction: column;
-      gap: 0;
+      gap: 2vw;
     }
     &__slogan {
       margin-bottom: 5px;
     }
     &__stamp {
-      min-width: 54px;
-      width: 54px;
-      height: 75px;
+      width: 90px;
       align-self: self-end;
-    }
-    &__swiper {
-      &::before {
-        bottom: -30%;
-        left: -20%;
-        width: 100%;
-        height: 100%;
+      img {
+        width: 90px;
       }
     }
     .slide {
@@ -218,6 +209,17 @@ import { audienceSlides } from '~/constants'
       margin-top: 12vw;
       .descr {
         max-width: 100%;
+      }
+    }
+  }
+}
+@media (max-width: 600px) {
+  .audience {
+    &__stamp {
+      width: 54px;
+      height: 90px;
+      img {
+        width: 54px;
       }
     }
   }

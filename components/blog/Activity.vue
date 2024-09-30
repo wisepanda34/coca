@@ -1,6 +1,8 @@
 <!-- Activity.vue -->
 <script setup>
 import ListSelect from '../UI/ListSelect.vue'
+import Orange from '~/components/global/Orange.vue'
+import Green from '~/components/global/Green.vue'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Navigation, Autoplay } from 'swiper/modules'
 import 'swiper/css'
@@ -26,6 +28,8 @@ const filteredSlides = computed(() => {
   <section class="activity">
     <div class="container">
       <div class="activity__wrapper">
+        <Orange class="activity__wrapper_orange" />
+        <Green class="activity__wrapper_green" />
         <h1 class="title-h1">Activity & Updates</h1>
         <p class="activity__slogan slogan">
           Our biggest challenge is making sure we're always designing and
@@ -86,29 +90,13 @@ const filteredSlides = computed(() => {
     position: relative;
     padding: 100px 0 50px;
 
-    &::before {
-      content: '';
-      position: absolute;
+    &_orange {
       top: -100px;
       left: -100px;
-      width: 550px;
-      height: 550px;
-      background-image: url('/images/bg-orange.png');
-      background-size: cover;
-      background-repeat: no-repeat;
-      z-index: -1;
     }
-    &::after {
-      content: '';
-      position: absolute;
+    &_green {
       top: 100px;
       right: -150px;
-      width: 550px;
-      height: 550px;
-      background-image: url('/images/bg-green.png');
-      background-size: cover;
-      background-repeat: no-repeat;
-      z-index: -1;
     }
   }
   &__slogan {
@@ -173,7 +161,7 @@ const filteredSlides = computed(() => {
 @media (max-width: 1439px) {
   .activity {
     &__wrapper {
-      padding: 8vw 0 2vw;
+      padding: 4vw 0 2vw;
     }
   }
 }
@@ -184,11 +172,11 @@ const filteredSlides = computed(() => {
 }
 @media (max-width: 767px) {
   .activity {
-    &__wrapper::before {
+    &__wrapper_orange {
       top: calc(5vw - 250px);
       left: calc(5vw - 200px);
     }
-    &__wrapper::after {
+    &__wrapper_green {
       top: 0;
       right: calc(5vw - 300px);
     }
@@ -206,14 +194,6 @@ const filteredSlides = computed(() => {
         }
       }
     }
-  }
-}
-@media (max-width: 480px) {
-  .activity__swiper .slide {
-  }
-}
-@media (max-width: 375px) {
-  .activity__swiper .slide {
   }
 }
 </style>
