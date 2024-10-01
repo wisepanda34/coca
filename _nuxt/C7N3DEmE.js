@@ -1,0 +1,1 @@
+import{p as o,_ as e,o as t,c as n,a as _}from"./COAjSYV0.js";const c=o("/svg/round.svg"),r={},a={class:"round"};function d(p,s){return t(),n("div",a,s[0]||(s[0]=[_("img",{src:c},null,-1)]))}const l=e(r,[["render",d],["__scopeId","data-v-3f761a72"]]);export{l as _};
