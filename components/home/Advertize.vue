@@ -68,6 +68,7 @@ const advertizeRef = useAnimationObserver(addAnimation, 0.2)
     &-image {
       position: relative;
       max-width: 400px;
+      background: $grey-light;
     }
     &-round {
       position: absolute;

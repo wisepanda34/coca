@@ -28,13 +28,13 @@ const digitalRef = useAnimationObserver(addAnimation, 0.1)
 
         <div ref="digitalRef" class="digital__right animate-from-right">
           <div class="digital__grafic">
-            <NuxtImg src="/images/sales.png" alt="sales.png" />
+            <img src="/images/sales.png" alt="sales.png" />
             <div class="digital__growth">
-              <NuxtImg src="/images/growth.png" alt="growth.png" />
+              <img src="/images/growth.png" alt="growth.png" />
             </div>
           </div>
           <div class="digital__statistic">
-            <NuxtImg src="/images/statistic.png" alt="statistic.png" />
+            <img src="/images/statistic.png" alt="statistic.png" />
           </div>
         </div>
       </div>

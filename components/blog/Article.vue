@@ -42,7 +42,7 @@ import { articles } from '~/constants'
               class="slide"
             >
               <div class="slide__image">
-                <NuxtImg :src="item.image" alt="img" />
+                <NuxtImg :src="item.image" alt="img" class="slide__img" />
                 <h4 class="slide__title">{{ item.title }}</h4>
                 <p class="motto">{{ item.descr }}</p>
                 <UIButton
@@ -129,6 +129,10 @@ import { articles } from '~/constants'
 
     .slide {
       padding-top: 200px;
+      &__img {
+        min-height: 200px;
+        background: $grey-light;
+      }
       &__title {
         font-size: 32px;
         font-weight: 700;

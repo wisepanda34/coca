@@ -129,6 +129,7 @@ import { audienceSlides } from '~/constants'
     &__image-big {
       position: relative;
       width: 50%;
+      background: $grey-light;
     }
     &__round {
       top: 20%;

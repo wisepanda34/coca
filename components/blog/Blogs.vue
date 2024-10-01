@@ -18,7 +18,7 @@ import { blogs } from '~/constants'
             fourth: index === 3
           }"
         >
-          <NuxtLink :to="`/blog/${item.id}`" class="blogs__img">
+          <NuxtLink :to="`/blog/${item.id}`" class="blogs__image">
             <NuxtImg :src="item.image" alt="img" />
           </NuxtLink>
           <NuxtLink class="blogs__title" :to="`/blog/${item.id}`">{{
@@ -66,7 +66,9 @@ import { blogs } from '~/constants'
       grid-row: 3 / 6;
     }
   }
-  &__img {
+  &__image {
+    min-height: 200px;
+    background: $grey-light;
     img {
       width: 100%;
       min-height: 100%;

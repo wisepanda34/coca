@@ -77,6 +77,7 @@ const message = ref('')
     width: 987px;
     height: 885px;
     z-index: -1;
+    background: $grey-light;
   }
   &__form {
     width: 608px;

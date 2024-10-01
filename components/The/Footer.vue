@@ -35,8 +35,8 @@ const isMobile = computed(() =>
   <footer :class="['footer', { 'footer--white': isWhiteRoute }]">
     <div class="container">
       <div class="footer__wrapper">
-        <Orange class="footer__wrapper_orange" />
-        <Green class="footer__wrapper_green" />
+        <Orange v-if="isWhiteRoute" class="footer__wrapper_orange" />
+        <Green v-if="isWhiteRoute" class="footer__wrapper_green" />
         <div class="footer__top">
           <div>
             <h2 class="footer__top-title">Think beyond the wave</h2>

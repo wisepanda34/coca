@@ -109,6 +109,10 @@ import { teamSlides } from '~/constants'
     &__item {
       max-width: 380px;
     }
+    &__image {
+      background: $grey-light;
+      min-height: 200px;
+    }
     &__info {
       display: grid;
       grid-template-columns: 2fr 1fr;

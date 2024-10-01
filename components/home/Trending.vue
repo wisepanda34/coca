@@ -109,6 +109,7 @@ const shouldShowRound = (index) => {
     height: 0;
     padding-bottom: 57%;
     position: relative;
+    background: $grey-light;
   }
   &__image img {
     position: absolute;
