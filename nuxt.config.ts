@@ -9,14 +9,14 @@ export default defineNuxtConfig({
     strict: true
   },
   app: {
-    baseURL: '/coca/',
+    baseURL: '/coca',
     pageTransition: { name: 'page-fade', mode: 'out-in' },
     layoutTransition: { name: 'layout', mode: 'out-in' },
     head: {
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
       title: 'Coca',
-      link: [{ rel: 'icon', type: 'image/svg+xml', href: '/favicon.ico' }]
+      link: [{ rel: 'icon', type: 'image/svg+xml', href: '/coca/favicon.ico' }]
     }
   },
   devtools: { enabled: true },
