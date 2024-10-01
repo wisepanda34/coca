@@ -9,7 +9,7 @@ export default defineNuxtConfig({
     strict: true
   },
   app: {
-    baseURL: '/coca',
+    baseURL: '/coca/',
     pageTransition: { name: 'page-fade', mode: 'out-in' },
     layoutTransition: { name: 'layout', mode: 'out-in' },
     head: {

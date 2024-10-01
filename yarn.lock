@@ -6573,9 +6573,9 @@ type-fest@^4.18.3:
   integrity sha512-yOGpmOAL7CkKe/91I5O3gPICmJNLJ1G4zFYVAsRHg7M64biSnPtRj0WNQt++bRkjYOqjWXrhnUw1utzmVErAdg==
 
 typescript@5.5.0:
-  version "5.7.0-dev.20240930"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.7.0-dev.20240930.tgz#faf207c3376e4503b3f3fb6ccafc30f9647f0389"
-  integrity sha512-mGW96cpbwcYuc264UPqGpKBLNebFFtVEXRLPwSwxVEub9tSyMI+XGFGxsznop7pU8E1ntx4OC4cN1n5MnzO0+Q==
+  version "5.7.0-dev.20241001"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.7.0-dev.20241001.tgz#5c21aed7957be71d240b6b9dc2684d0aa6842689"
+  integrity sha512-E+sQ0WmFXNyLddzyWmBBVwyn4NpBRgVJoiq8lLy25nQBLTKFMPnHmrKq+09uOv35ey3XhMA6y3lVzayuukJRpQ==
 
 ufo@^1.1.2, ufo@^1.3.2, ufo@^1.5.3, ufo@^1.5.4:
   version "1.5.4"
