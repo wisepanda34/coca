@@ -1,1 +1,0 @@
-import{_ as o,o as _,c as s,b as e,q as n}from"./B76zslw0.js";const t={},a={class:"round"};function r(d,m){const c=n;return _(),s("div",a,[e(c,{src:"/svg/round.svg"})])}const f=o(t,[["render",r],["__scopeId","data-v-33ab6caa"]]);export{f as _};
