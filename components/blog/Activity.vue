@@ -65,7 +65,7 @@ const filteredSlides = computed(() => {
                 class="slide"
               >
                 <div class="slide__image">
-                  <NuxtImg :src="item.image" alt="img" />
+                  <img :src="item.image" alt="img" />
                 </div>
                 <div class="slide__info">
                   <p>{{ item.published }}</p>

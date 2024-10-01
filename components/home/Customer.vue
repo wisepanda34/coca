@@ -46,11 +46,7 @@ const modules = [Navigation, EffectFlip, Autoplay]
               class="customer__slide slide"
             >
               <div class="slide__rating">
-                <NuxtImg
-                  v-for="n in item.rating"
-                  :key="n"
-                  src="/svg/star.svg"
-                />
+                <img v-for="n in item.rating" :key="n" src="/svg/star.svg" />
                 {{ item.rating }}
               </div>
               <div class="slide__review">
@@ -58,7 +54,7 @@ const modules = [Navigation, EffectFlip, Autoplay]
               </div>
               <div class="slide__author">
                 <div class="slide__avatar">
-                  <NuxtImg :src="item.avatar" />
+                  <img :src="item.avatar" />
                 </div>
                 <p class="slide__name">{{ item.name }}</p>
                 <p class="slide__position">{{ item.position }}</p>

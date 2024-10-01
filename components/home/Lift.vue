@@ -37,7 +37,7 @@
         </div>
 
         <div class="lift__image">
-          <NuxtImg src="/images/lift.png" alt="lift/png" />
+          <img src="/images/lift.png" alt="lift/png" />
         </div>
 
         <div class="lift__content">

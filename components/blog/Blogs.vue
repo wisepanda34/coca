@@ -19,7 +19,7 @@ import { blogs } from '~/constants'
           }"
         >
           <NuxtLink :to="`/blog/${item.id}`" class="blogs__image">
-            <NuxtImg :src="item.image" alt="img" />
+            <img :src="item.image" alt="img" />
           </NuxtLink>
           <NuxtLink class="blogs__title" :to="`/blog/${item.id}`">{{
             item.title

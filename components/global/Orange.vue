@@ -3,7 +3,7 @@
 
 <template>
   <div class="orange">
-    <NuxtImg src="/images/bg-orange.png" />
+    <img src="/images/bg-orange.png" />
   </div>
 </template>
 

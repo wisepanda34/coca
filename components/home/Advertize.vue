@@ -26,9 +26,9 @@ const advertizeRef = useAnimationObserver(addAnimation, 0.2)
             class="advertize__block"
           >
             <div class="advertize__block-image">
-              <NuxtImg :src="item.imageLink" :alt="item.imageLink" />
+              <img :src="item.imageLink" :alt="item.imageLink" />
               <div class="advertize__block-round flex-center">
-                <NuxtImg :src="item.icon" />
+                <img :src="item.icon" />
               </div>
             </div>
             <div class="advertize__block-content">

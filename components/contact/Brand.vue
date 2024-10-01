@@ -57,7 +57,7 @@ const message = ref('')
           <UIButton text="Get started" />
         </form>
         <div class="brand__picture">
-          <NuxtImg src="/images/skyrocketing.png" aria-multiline="img" />
+          <img src="/images/skyrocketing.png" aria-multiline="img" />
         </div>
       </div>
     </div>

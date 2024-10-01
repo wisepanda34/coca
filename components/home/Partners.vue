@@ -26,7 +26,7 @@ const partnersRightRef = useAnimationObserver(addAnimation, 1)
             :key="index"
             class="partners__brand"
           >
-            <NuxtImg :src="brand.src" :alt="brand.name" />
+            <img :src="brand.src" :alt="brand.name" />
           </div>
         </div>
       </div>

@@ -25,7 +25,7 @@ import { audienceSlides } from '~/constants'
           <div class="audience__stamp">
             <div class="float-x rotate-reverse">
               <div class="float-y">
-                <NuxtImg src="/svg/stamp.svg" alt="stamp.svg" />
+                <img src="/svg/stamp.svg" alt="stamp.svg" />
               </div>
             </div>
           </div>
@@ -56,12 +56,12 @@ import { audienceSlides } from '~/constants'
             >
               <div class="slide__wrapper">
                 <div class="slide__image-big">
-                  <NuxtImg :src="item.imageBig" alt="img" />
+                  <img :src="item.imageBig" alt="img" />
                   <UIRound class="slide__round" />
                 </div>
                 <div class="slide__block">
                   <div class="slide__block-image">
-                    <NuxtImg :src="item.imageMain" alt="img" />
+                    <img :src="item.imageMain" alt="img" />
                   </div>
                   <h4 class="title-h4">{{ item.title }}</h4>
                   <p class="motto">{{ item.descr }}</p>

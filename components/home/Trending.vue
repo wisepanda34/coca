@@ -57,7 +57,7 @@ const shouldShowRound = (index) => {
               class="trending__slide"
             >
               <div class="trending__image">
-                <NuxtImg :src="item.imageLink" />
+                <img :src="item.imageLink" />
                 <UIRound
                   v-if="shouldShowRound(index)"
                   class="trending__round"

@@ -42,26 +42,26 @@ export const footerLinks = [
 export const sociaties = [
   {
     name: 'fb',
-    srcWhite: '/svg/fb.svg',
-    src: '/svg/fb-black.svg',
+    srcWhite: 'svg/fb.svg',
+    src: 'svg/fb-black.svg',
     link: 'https://www.facebook.com/'
   },
   {
     name: 'twitter',
-    srcWhite: '/svg/twitter-white.svg',
-    src: '/svg/twitter.svg',
+    srcWhite: 'svg/twitter-white.svg',
+    src: 'svg/twitter.svg',
     link: 'https://x.com/'
   },
   {
     name: 'instagram',
-    srcWhite: '/svg/instagram-white.svg',
-    src: '/svg/instagram.svg',
+    srcWhite: 'svg/instagram-white.svg',
+    src: 'svg/instagram.svg',
     link: 'https://www.instagram.com/'
   },
   {
     name: 'linkedIn',
-    srcWhite: '/svg/linkedin-white.svg',
-    src: '/svg/linkedin.svg',
+    srcWhite: 'svg/linkedin-white.svg',
+    src: 'svg/linkedin.svg',
     link: 'https://www.linkedin.com/feed/'
   }
 ]
@@ -88,58 +88,58 @@ export const partners = [
   },
   {
     name: 'amazon',
-    src: '/images/amazon.png'
+    src: 'images/amazon.png'
   },
   {
     name: 'FedEx',
-    src: '/images/fedEx.png'
+    src: 'images/fedEx.png'
   },
   {
     name: 'microsoft',
-    src: '/images/microsoft.png'
+    src: 'images/microsoft.png'
   },
   {
     name: 'google',
-    src: '/images/google.png'
+    src: 'images/google.png'
   },
   {
     name: 'OLA',
-    src: '/images/ola.png'
+    src: 'images/ola.png'
   },
   {
     name: 'Walmart',
-    src: '/images/walmart.png'
+    src: 'images/walmart.png'
   },
   {
     name: 'OYO',
-    src: '/images/oyo.png'
+    src: 'images/oyo.png'
   }
 ]
 export const advertizes = [
   {
-    imageLink: '/images/lead.png',
-    icon: '/svg/lead.svg',
+    imageLink: 'images/lead.png',
+    icon: 'svg/lead.svg',
     title: 'Lead happiness for customers',
     motto:
       'Build more meaningful and lasting relationships - better understand their needs, identify new opportunities to help address any problems faster'
   },
   {
-    imageLink: '/images/mutually.png',
-    icon: '/svg/mutually.svg',
+    imageLink: 'images/mutually.png',
+    icon: 'svg/mutually.svg',
     title: 'Mutually support each other',
     motto:
       'Build more meaningful and lasting relationships - better understand their needs, identify new opportunities to help address any problems faster'
   },
   {
-    imageLink: '/images/have_fun.png',
-    icon: '/svg/have_fun.svg',
+    imageLink: 'images/have_fun.png',
+    icon: 'svg/have_fun.svg',
     title: 'Have fun growing together',
     motto:
       'Build more meaningful and lasting relationships - better understand their needs, identify new opportunities to help address any problems faster'
   },
   {
-    imageLink: '/images/make_business.png',
-    icon: '/svg/make_business.svg',
+    imageLink: 'images/make_business.png',
+    icon: 'svg/make_business.svg',
     title: 'Make Your Business Grow',
     motto:
       'Build more meaningful and lasting relationships - better understand their needs, identify new opportunities to help address any problems faster'
@@ -148,25 +148,25 @@ export const advertizes = [
 
 export const trendigSlides = [
   {
-    imageLink: '/images/whats_makes.png',
+    imageLink: 'images/whats_makes.png',
     title: 'What makes an authentic employee profile, and why does it matter?',
     published: 'Jan 30, 2021',
     author: 'Albert Sans'
   },
   {
-    imageLink: '/images/how_build.png',
+    imageLink: 'images/how_build.png',
     title: 'How to build a Kaylen relationship with a good company',
     published: 'Apr 12, 2023',
     author: 'April Rose'
   },
   {
-    imageLink: '/images/slide-3.png',
+    imageLink: 'images/slide-3.png',
     title: 'What makes an authentic employee profile, and why does it matter ?',
     published: 'Sep 17, 2024',
     author: 'Gregory Simson'
   },
   {
-    imageLink: '/images/slide-3.png',
+    imageLink: 'images/slide-3.png',
     title: 'What makes an authentic employee profile, and why does it matter ?',
     published: 'Sep 17, 2024',
     author: 'Gregory Simson'
@@ -176,21 +176,21 @@ export const trendigSlides = [
 export const customerSlides = [
   {
     name: 'Renee Wells',
-    avatar: '/images/ava-1.png',
+    avatar: 'images/ava-1.png',
     position: 'Product Designer, Quotient',
     rating: 5,
     text: '“With Agency the results are very satisfying. wrapped with Hight quality and innovative design that makes a surge of visitors on my website”'
   },
   {
     name: 'Dane Lewes',
-    avatar: '/images/have_fun.png',
+    avatar: 'images/have_fun.png',
     position: 'Product Manager, BCFRoom',
     rating: 4,
     text: '“Working with Agency was a game-changer. Their high-quality, innovative design boosted my websites visitor engagement remarkably.”'
   },
   {
     name: 'Gabbi Ronophas',
-    avatar: '/images/lead.png',
+    avatar: 'images/lead.png',
     position: 'CEO, Bright Lem',
     rating: 3,
     text: '“ Their high-quality, innovative design boosted my websites visitor engagement remarkably.”'
@@ -199,29 +199,29 @@ export const customerSlides = [
 
 export const audienceSlides = [
   {
-    imageMain: '/images/slide-3.png',
-    imageBig: '/images/work_on_laptop.png',
+    imageMain: 'images/slide-3.png',
+    imageBig: 'images/work_on_laptop.png',
     title: 'What we believe in',
     descr:
       'Over the years at Sans, we’ve put a lot of thought into what it is that makes us who we are. The qualities that unite us, that make us such an effective team, and...'
   },
   {
-    imageMain: '/images/skyrocketing.png',
-    imageBig: '/images/two_women.png',
+    imageMain: 'images/skyrocketing.png',
+    imageBig: 'images/two_women.png',
     title: 'How we achieve goals',
     descr:
       'Lot of thought into what it is that makes us who we are. The qualities that unite us, that make us such an effective team, and... Successful digital marketing strategies'
   },
   {
-    imageMain: '/images/slide-3.png',
-    imageBig: '/images/work_on_laptop.png',
+    imageMain: 'images/slide-3.png',
+    imageBig: 'images/work_on_laptop.png',
     title: 'What we believe in',
     descr:
       'Over the years at Sans, we’ve put a lot of thought into what it is that makes us who we are. The qualities that unite us, that make us such an effective team, and...'
   },
   {
-    imageMain: '/images/skyrocketing.png',
-    imageBig: '/images/two_women.png',
+    imageMain: 'images/skyrocketing.png',
+    imageBig: 'images/two_women.png',
     title: 'How we achieve goals',
     descr:
       'Lot of thought into what it is that makes us who we are. The qualities that unite us, that make us such an effective team, and... Successful digital marketing strategies'
@@ -230,7 +230,7 @@ export const audienceSlides = [
 
 export const teamSlides = [
   {
-    photo: '/images/Arlyne.png',
+    photo: 'images/Arlyne.png',
     name: 'Arlyne Stefano',
     position: 'Founder & CEO',
     twitter: 'http://x.com',
@@ -238,7 +238,7 @@ export const teamSlides = [
     instagram: 'http://instagram.com'
   },
   {
-    photo: '/images/Katy.png',
+    photo: 'images/Katy.png',
     name: 'Katy Cristy',
     position: 'Chief Technology Officer',
     twitter: 'http://x.com',
@@ -246,7 +246,7 @@ export const teamSlides = [
     instagram: 'http://instagram.com'
   },
   {
-    photo: '/images/Roger.png',
+    photo: 'images/Roger.png',
     name: 'Roger Dzawin',
     position: 'Chief Technology Officer',
     twitter: 'http://x.com',
@@ -254,7 +254,7 @@ export const teamSlides = [
     instagram: 'http://instagram.com'
   },
   {
-    photo: '/images/Arda.png',
+    photo: 'images/Arda.png',
     name: 'Arda Guler',
     position: 'Deputy CEO',
     twitter: 'http://x.com',
@@ -262,7 +262,7 @@ export const teamSlides = [
     instagram: 'http://instagram.com'
   },
   {
-    photo: '/images/Eva.png',
+    photo: 'images/Eva.png',
     name: 'Eva Duhivny',
     position: 'Chief DevOps',
     twitter: 'http://x.com',
@@ -270,7 +270,7 @@ export const teamSlides = [
     instagram: 'http://instagram.com'
   },
   {
-    photo: '/images/Jaison.png',
+    photo: 'images/Jaison.png',
     name: 'Jaison Dortes',
     position: 'Project Manager',
     twitter: 'http://x.com',
@@ -282,7 +282,7 @@ export const teamSlides = [
 export const activitySlides = [
   {
     id: 'practice',
-    image: '/images/activity-1.png',
+    image: 'images/activity-1.png',
     published: 'Published in Insight Jan 30, 2022',
     title: 'Practice making User Flow',
     descr: "In this article, we'll cover how to create user flows",
@@ -292,7 +292,7 @@ export const activitySlides = [
   },
   {
     id: 'design',
-    image: '/images/activity-2.png',
+    image: 'images/activity-2.png',
     published: 'Published in Insight May 15, 2023',
     title: 'Overview of the Design Principles',
     descr:
@@ -303,7 +303,7 @@ export const activitySlides = [
   },
   {
     id: 'website',
-    image: '/images/activity-3.png',
+    image: 'images/activity-3.png',
     published: 'Published in Insight Aug 09, 2023',
     title: 'Using Grid in website design',
     descr: 'Andi: "Whats the grid like?" Toni: “Like below…”',
@@ -313,7 +313,7 @@ export const activitySlides = [
   },
   {
     id: 'website',
-    image: '/images/activity-2.png',
+    image: 'images/activity-2.png',
     published: 'Published in Insight May 15, 2023',
     title: 'Overview of the Design Principles',
     descr:
@@ -327,7 +327,7 @@ export const activitySlides = [
 export const blogs = [
   {
     id: 'aws',
-    image: '/images/blackblock-1.png',
+    image: 'images/blackblock-1.png',
     title: 'How we perform long-running tasks using AWS services',
     descr:
       'Webflow is web design tool as well as a hosting platform and CMS all in one. While you are probably familiar with all of these, they are usually entirely separate tools.',
@@ -335,7 +335,7 @@ export const blogs = [
   },
   {
     id: 'research',
-    image: '/images/blackblock-2.png',
+    image: 'images/blackblock-2.png',
     title: 'How to ask when doing User Research',
     descr:
       'Bro, the story is that you want to make an application for buying and selling goods on the market. During user research, what do you think you will ask people?',
@@ -343,7 +343,7 @@ export const blogs = [
   },
   {
     id: 'exploration',
-    image: '/images/blackblock-3.png',
+    image: 'images/blackblock-3.png',
     title: 'Exploration — Simple exercise but big effectsks using AWS services',
     descr:
       'Make alternatives or other options for the design we are making. For example, we are creating a website design. Then there is the testimonial section.',
@@ -351,7 +351,7 @@ export const blogs = [
   },
   {
     id: 'coding',
-    image: '/images/webflow.png',
+    image: 'images/webflow.png',
     title: 'Webflow Break the Coding Barrier',
     descr:
       'Webflow is web design tool as well as a hosting platform and CMS all in one. While you are probably familiar with all of these, they are usually entirely separate tools.',
@@ -361,26 +361,26 @@ export const blogs = [
 
 export const articles = [
   {
-    image: '/images/article-1.png',
+    image: 'images/article-1.png',
     title:
       'List of UX Designer Portfolio / Case Studies where you can make money',
     descr:
       'Here are some portfolios / Case Studies from UX Designers that you can use as a reference for creating a portfolio. Two interesting things from their portfolio are:'
   },
   {
-    image: '/images/activity-3.png',
+    image: 'images/activity-3.png',
     title: 'Skyrocketing in The Designing Career, Why Not?',
     descr:
       'Ever thought of jumping into the world of design as a career? If not, you may want to look at what the word ‘design’ actually means. Design is a method of designing aesthetic actions that are carried out.'
   },
   {
-    image: '/images/article-2.png',
+    image: 'images/article-2.png',
     title: 'Elements that may be missed when designing the UI',
     descr:
       'This is an article that talks about the little elements that are often overlooked when designing UI.'
   },
   {
-    image: '/images/mutually.png',
+    image: 'images/mutually.png',
     title: 'Case Studies where you can make money',
     descr:
       'Case Studies from UX Designers that you can use as a reference for creating a portfolio. Two interesting things from their portfolio are:'
@@ -390,7 +390,7 @@ export const articles = [
 export const priceCards = [
   {
     package: 'Starter',
-    icon: '/svg/heart.svg',
+    icon: 'svg/heart.svg',
     offer: false,
     bgBlue: false,
     descr:
@@ -401,8 +401,8 @@ export const priceCards = [
   },
   {
     package: 'Popular',
-    icon: '/svg/popular.svg',
-    iconBest: '/images/best-offers.png',
+    icon: 'svg/popular.svg',
+    iconBest: 'images/best-offers.png',
     offer: true,
     bgBlue: true,
     descr:
@@ -413,7 +413,7 @@ export const priceCards = [
   },
   {
     package: 'Enterprise',
-    icon: '/svg/crown.svg',
+    icon: 'svg/crown.svg',
     offer: false,
     bgBlue: false,
     descr:

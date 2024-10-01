@@ -1,7 +1,6 @@
 <!-- The/PricingCard.vue -->
 <script setup>
 import { useSwitchStore } from '~/stores/switch.store'
-import { defineProps, defineEmits } from 'vue'
 const useSwitch = useSwitchStore()
 
 const props = defineProps({
@@ -26,8 +25,8 @@ const handleChoosePlan = () => {
   <div class="card" :class="{ 'bg-blue': card.bgBlue }">
     <div class="card__wrapper">
       <div class="card__icons">
-        <NuxtImg :src="card.icon" alt="icon" class="card__icon" />
-        <NuxtImg
+        <img :src="card.icon" alt="icon" class="card__icon" />
+        <img
           v-if="card.iconBest"
           :src="card.iconBest"
           alt="icon"

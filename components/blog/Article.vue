@@ -42,7 +42,7 @@ import { articles } from '~/constants'
               class="slide"
             >
               <div class="slide__image">
-                <NuxtImg :src="item.image" alt="img" class="slide__img" />
+                <img :src="item.image" alt="img" class="slide__img" />
                 <h4 class="slide__title">{{ item.title }}</h4>
                 <p class="motto">{{ item.descr }}</p>
                 <UIButton

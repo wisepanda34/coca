@@ -106,12 +106,12 @@ const isMobile = computed(() =>
               class="sociaty__item"
             >
               <NuxtLink :to="item.link">
-                <NuxtImg
+                <img
                   v-if="!isWhiteRoute"
                   class="sociaty__img"
                   :src="item.srcWhite"
                 />
-                <NuxtImg v-else class="sociaty__img" :src="item.src" />
+                <img v-else class="sociaty__img" :src="item.src" />
               </NuxtLink>
             </div>
           </div>

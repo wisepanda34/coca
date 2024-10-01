@@ -50,19 +50,19 @@ import { teamSlides } from '~/constants'
             >
               <div class="slide__item">
                 <div class="slide__image">
-                  <NuxtImg :src="item.photo" alt="img" />
+                  <img :src="item.photo" alt="img" />
                 </div>
                 <div class="slide__info">
                   <p class="descr">{{ item.name }}</p>
                   <div class="slide__social">
                     <NuxtLink class="slide__icon" :to="item.twitter">
-                      <NuxtImg src="/svg/icon-twitter.svg" alt="ic" />
+                      <img src="/svg/icon-twitter.svg" alt="ic" />
                     </NuxtLink>
                     <NuxtLink class="slide__icon" :to="item.linkedIn">
-                      <NuxtImg src="/svg/icon-linkedin.svg" alt="ic" />
+                      <img src="/svg/icon-linkedin.svg" alt="ic" />
                     </NuxtLink>
                     <NuxtLink class="slide__icon" :to="item.instagram">
-                      <NuxtImg src="/svg/icon-instagram.svg" alt="ic" />
+                      <img src="/svg/icon-instagram.svg" alt="ic" />
                     </NuxtLink>
                   </div>
                   <p class="motto">{{ item.position }}</p>

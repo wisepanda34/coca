@@ -19,7 +19,7 @@ const handleChoosePlan = (card) => {
         <div class="pricing__up">
           <div class="pricing__plans">
             Pricing plans
-            <NuxtImg src="/images/smilik.png" alt="smile" />
+            <img src="/images/smilik.png" alt="smile" />
           </div>
           <h1 class="pricing__title title-h1">
             Choose a plan for a more advanced business

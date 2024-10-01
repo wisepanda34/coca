@@ -22,7 +22,7 @@ const sansRef = useAnimationObserver(addAnimation, 0.5)
         <div ref="sansRef" class="sans__content animate-up">
           <div class="sans__block">
             <div class="sans__block-img">
-              <NuxtImg src="/svg/build.svg" />
+              <img src="/svg/build.svg" />
             </div>
             <div class="sans__block-title">Build your date fundamental</div>
             <div class="sans__block-descr">
@@ -33,7 +33,7 @@ const sansRef = useAnimationObserver(addAnimation, 0.5)
           </div>
           <div class="sans__block">
             <div class="sans__block-img">
-              <NuxtImg src="/svg/measure.svg" />
+              <img src="/svg/measure.svg" />
             </div>
             <div class="sans__block-title">Measure more effective</div>
             <div class="sans__block-descr">
@@ -44,7 +44,7 @@ const sansRef = useAnimationObserver(addAnimation, 0.5)
           </div>
           <div class="sans__block">
             <div class="sans__block-img">
-              <NuxtImg src="/svg/activate.svg" />
+              <img src="/svg/activate.svg" />
             </div>
             <div class="sans__block-title">Activate your date</div>
             <div class="sans__block-descr">
@@ -55,7 +55,7 @@ const sansRef = useAnimationObserver(addAnimation, 0.5)
           </div>
           <div class="sans__block">
             <div class="sans__block-img">
-              <NuxtImg src="/svg/strengthen.svg" />
+              <img src="/svg/strengthen.svg" />
             </div>
             <div class="sans__block-title">Strengthen consumer privacy</div>
             <div class="sans__block-descr">

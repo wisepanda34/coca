@@ -3,7 +3,7 @@
 
 <template>
   <div class="round">
-    <NuxtImg src="/svg/round.svg" />
+    <img src="/svg/round.svg" />
   </div>
 </template>
 
