@@ -9,9 +9,9 @@ export default defineNuxtConfig({
     strict: true
   },
   app: {
-    baseURL: '/coca/',
-    pageTransition: { name: 'page-fade', mode: 'out-in' },
-    layoutTransition: { name: 'layout', mode: 'out-in' },
+    baseURL: '/',
+    pageTransition: { name: 'page-fade' },
+    layoutTransition: { name: 'layout' },
     head: {
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
