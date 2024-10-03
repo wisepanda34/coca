@@ -46,5 +46,6 @@
     "sass-loader": "^16.0.2",
     "vite-plugin-eslint2": "^4.4.2",
     "vue-eslint-parser": "^9.4.3"
-  }
+  },
+  "packageManager": "yarn@4.5.0"
 }
