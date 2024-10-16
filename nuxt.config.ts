@@ -16,7 +16,7 @@ export default defineNuxtConfig({
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
       title: 'Coca',
-      link: [{ rel: 'icon', type: 'image/svg+xml', href: '/coca/favicon.ico' }]
+      link: [{ rel: 'icon', type: 'image/svg+xml', href: '/favicon.ico' }]
     }
   },
   devtools: { enabled: true },
